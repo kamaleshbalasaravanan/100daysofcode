@@ -91,7 +91,8 @@ form input{
 @media (max-width: 500px) and (min-width:300px){
     .container{
         margin-top: 100px;
-        margin-left: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
         /* margin-right: 100px; */
         padding: 10px;
         width: 320px;
