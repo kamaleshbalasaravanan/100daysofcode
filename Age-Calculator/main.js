@@ -46,7 +46,7 @@ function calculateDate(e){
     else{
         console.log('bye')
         const age = calculateAge(birthdayValue)
-        result.textContent = `your age is ${age} ${age<=1?"year":"years"}`
+        result.textContent = `your age is ${age} ${age<=1?"year":"years"} old`
     }
 }
 
