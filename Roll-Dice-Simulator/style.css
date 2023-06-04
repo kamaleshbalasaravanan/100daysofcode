@@ -76,3 +76,26 @@ button{
         transform: rotate(11deg);
     }
 }
+
+@media(max-width:500px) and (min-width:300px){
+
+    body{
+    background-size: 100% 50%;
+
+    }
+    .container{
+        width: 300px;
+        padding: 25px;
+    }
+
+    p{
+        font-size: 20px ;
+        margin: 25px 0;
+    }
+
+    button{
+        width: 150px;
+        font-size: 15px;
+        padding: 5px;
+    }
+}
