@@ -12,9 +12,12 @@ body{
     flex-direction: column;
     height: 750px;
     width: 100%;
+    background-color: navy;
+    /* background-color: linear-gradient(navy navy); */
 }
 
 .container{
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -63,4 +66,31 @@ body{
 
 #restartbtn{
     background-color: rgb(144, 144, 144);
+}
+
+
+@media(max-width:500px) and (min-width:300px){
+    .container{
+        width: 300px;
+        height: 400px;
+    }
+    .heading{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .timer{
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+    .remainder{
+        font-size: 20px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
