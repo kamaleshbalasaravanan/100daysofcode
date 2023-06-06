@@ -46,6 +46,9 @@ function startTimer(){
         console.log(elapsedTime)
         timer.textContent = `${formatTime(elapsedTime)}`
     },10)
+
+    startBtn.disabled = true
+    stopBtn.disabled = false
 }
 
 
@@ -53,6 +56,9 @@ function stopTimer(){
     console.log('stop')
     clearInterval(intervals)
     heading.style.color = "red"
+
+    startBtn.disabled = false
+    stopBtn.disabled = true
 
 }
 
@@ -65,7 +71,8 @@ function restartTimer(){
     timer.textContent = "00:00:00"
     heading.style.color = "black"
 
-
+    startBtn.disabled = false
+    stopBtn.disabled = true
 
 }
 
