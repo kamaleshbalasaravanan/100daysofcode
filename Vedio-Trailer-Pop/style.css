@@ -84,3 +84,25 @@ p{
     color: white;
     cursor: pointer;
 }
+
+@media (max-width:500px) and (min-width:300px){
+    .container{
+        margin-top: 10px;
+        width: 300px;
+    }
+
+    img{
+        width: 280px;
+        height: 300px;
+    }
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    p{
+        width: 300px;
+    }
+    .trailer-content video{
+        width: 300px;
+    }
+}
