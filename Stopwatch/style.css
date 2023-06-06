@@ -48,7 +48,7 @@ body{
 }
 
 .buttons{
-    width: 90%;
+    width: 99%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -65,5 +65,37 @@ body{
     letter-spacing: 2px;
     outline: none;
     border-radius: 5px;
+
+}
+
+
+@media (max-width:500px) and (min-width:300px){
+    .body{
+        overflow: hidden;        
+    }
+    .container{
+        width: 300px;
+        height: 300px;
+        margin: 0;
+        margin-bottom: 200px;
+    }
+
+    .heading{
+        font-size: 30px;
+    }
+
+    .timer{
+        font-size: 35px;
+    }
+
+    .buttons{
+        width: 280px;
+    }
+
+    .btn{
+        font-size: 13px;
+        width: 100px;
+        padding: 0px 2px;
+    }
 
 }
