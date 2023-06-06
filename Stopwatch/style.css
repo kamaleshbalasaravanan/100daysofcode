@@ -68,6 +68,17 @@ body{
 
 }
 
+#startBtn{
+    background-color: rgb(92, 185, 92);
+}
+
+#stopBtn{
+    background-color: red;
+}
+
+#restartBtn{
+    background-color: lightgrey;
+}
 
 @media (max-width:500px) and (min-width:300px){
     .body{
@@ -99,3 +110,4 @@ body{
     }
 
 }
+
