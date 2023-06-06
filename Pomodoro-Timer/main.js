@@ -3,7 +3,6 @@ const remainder = document.querySelector('.remainder')
 const startbtn = document.querySelector('#startbtn')
 const pausebtn = document.querySelector('#pausebtn')
 const restartbtn = document.querySelector('#restartbtn')
-// const container = document.querySelector('.container')
 const container = document.querySelector('.container')
 const heading = document.querySelector('.heading')
 let intervals;
@@ -20,6 +19,7 @@ function updateTimer(){
     let newtime = `${minutes.toString().padStart(2,"0")}:${seconds.toString().padStart(2,"0")}`
     // console.log(newtime)
     timer.innerHTML = newtime
+  
 }
 
 
@@ -44,7 +44,9 @@ function startTimer(){
                 updateTimer()
             }
         },1000)
-    
+        
+        startbtn.disabled = true
+        pausebtn.disabled = false
 }
 
 function pauseTimer(){
@@ -53,7 +55,9 @@ function pauseTimer(){
     container.style.border = "4px solid red"
     timer.style.color = "red"
     heading.style.color = "red"
-    
+
+    startbtn.disabled = false
+    pausebtn.disabled = true
 
 }
 
@@ -65,4 +69,8 @@ function restartTimer(){
     clearInterval(intervals)
     timeleft = 1500
     updateTimer()
+
+    remainder.innerHTML = " "
+    startbtn.disabled = false
+    pausebtn.disabled = true
 }
