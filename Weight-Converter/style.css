@@ -5,52 +5,95 @@
 }
 
 body{
-    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+    background: linear-gradient(90deg, #9ebd13 50%, #008552 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     /* margin-top: 200px; */
+    position: relative;
 }
 
 .container{
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+    background-color: #ffffff;
     justify-content: center;
-    border: 1px solid black;
-    margin-top: 200px; 
-    width: 400px;
-    padding: 50px;
+    /* border: 1px solid black; */
+    margin-top: 350px; 
+    width: 450px;
+    border-radius: 10px;
+    padding: 50px 01px;
+    /* box-shadow: 15px 15px 15px white; */
+    /* box-shadow: rgba(152, 158, 161, 0.12) 0px 2px 4px 0px, rgba(144, 147, 148, 0.32) 0px 2px 16px 0px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    /* position: absolute; */
+    /* top: 10px; */
 }
 
 h1{
     text-align: center;
     margin-bottom: 20px;
+    font-size: 35px;
+    text-transform: uppercase;
+    /* color: #5bdfeb; */
+    letter-spacing: 2px;
 }
 
 .inputfields{
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .inputfields input{
-    width: 220px;
-    height: 30px;
+    width: 280px;
+    height: 35px;
     text-align: center;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 15px;
+    padding: 10px;
+    margin-right: 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    /* background: linear-gradient(90deg, #b4e9e5 0%, #4ebbc9 100%); */
+    /* background-color: #f5f8fb; */
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+    border: 3px solid #9ebd13;
+
 }
 
 .inputfields label{
-    font-size: 21px;
+
+    font-size: 20px;
+    font-weight: 600;
     letter-spacing: 1px;
+    /* margin-top: 14px; */
+    margin-left: 25px;
+    text-transform: uppercase;
 }
 
 .message{
-    margin: 20px 0;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    margin: 10px 0px 20px 25px;
 }
 
+.message .result{
+    margin-bottom: 20px;
+    /* color: #1ad58d; */
+    font-size: 20px;
+}
+
+.message .error{
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+    color: rgb(250, 70, 70);
+}
