@@ -21,7 +21,7 @@ body{
     background-color: #ffffff;
     justify-content: center;
     /* border: 1px solid black; */
-    margin-top: 350px; 
+    margin-top: 300px; 
     width: 450px;
     border-radius: 10px;
     padding: 50px 01px;
@@ -81,11 +81,11 @@ h1{
     display: flex;
     /* align-items: center; */
     flex-direction: column;
-    margin: 10px 0px 20px 25px;
+    margin: 10px 0px 0px 25px;
 }
 
 .message .result{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* color: #1ad58d; */
     font-size: 20px;
 }
@@ -96,4 +96,33 @@ h1{
     letter-spacing: 2px;
     /* text-transform: uppercase; */
     color: rgb(250, 70, 70);
+}
+
+@media(max-width:500px) and (min-width:300px){
+
+    body{
+        width: 100%;
+    }
+    .container{
+        width: 300px;
+        padding: 30px 10px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .inputfields input{
+        width: 180px;
+        margin-left: 10px;
+    }
+    .inputfields label{
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 15px;
+    }
+
+    .message{
+        margin: 0px 0px 0px 15px;
+    }
 }
