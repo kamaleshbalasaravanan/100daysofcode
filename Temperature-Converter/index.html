@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,31 @@
     <title>Temperature COnverter</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="heading">Temperature Converter</div>
-        <div class="inputfield">
-            <div class="temperature-wrapper">
-                <label>celsius:</label>
-                <input type="number" onchange="calculateTemp(event)" name="celsius" id="celsiusbox" placeholder="enter temperature">
-            </div>
-            <div class="temperature-wrapper">
-                <label>fahrenheit:</label>
-                <input type="number" onchange="calculateTemp(event)" name="fahrenheit" id="fahrenheitbox" placeholder="enter temperature">
-            </div>
-            <div class="temperature-wrapper">
-                <label>kelvin:</label>
-                <input type="number" onchange="calculateTemp(event)" name="kelvin" id="kelvinbox" placeholder="enter temperature">
+    <div class="border">
+        <div class="container">
+            <div class="heading">Temperature Converter</div>
+            <div class="inputfield">
+                <div class="temperature-wrapper">
+                    <label>celsius:</label>
+                    <input type="number" onchange="calculateTemp(event)" name="celsius" id="celsiusbox"
+                        placeholder="enter temperature">
+                </div>
+                <div class="temperature-wrapper">
+                    <label>fahrenheit:</label>
+                    <input type="number" onchange="calculateTemp(event)" name="fahrenheit" id="fahrenheitbox"
+                        placeholder="enter temperature">
+                </div>
+                <div class="temperature-wrapper">
+                    <label>kelvin:</label>
+                    <input type="number" onchange="calculateTemp(event)" name="kelvin" id="kelvinbox"
+                        placeholder="enter temperature">
+                </div>
             </div>
         </div>
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
