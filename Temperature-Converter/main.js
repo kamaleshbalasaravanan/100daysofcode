@@ -2,6 +2,10 @@ const celsius = document.querySelector('#celsiusbox')
 const fahrenheit = document.querySelector('#fahrenheitbox')
 const kelvin = document.querySelector('#kelvinbox')
 
+// const body = document.querySelector('body')
+// body.classList.remove('border')
+// console.log(body)
+
 let resultTime
 
 function calculateTemp(e) {
