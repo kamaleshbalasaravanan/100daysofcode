@@ -2,6 +2,7 @@ const celsius = document.querySelector('#celsiusbox')
 const fahrenheit = document.querySelector('#fahrenheitbox')
 const kelvin = document.querySelector('#kelvinbox')
 
+let resultTime
 
 function calculateTemp(e) {
     // console.log(e.target.value)
@@ -24,8 +25,14 @@ function calculateTemp(e) {
             fahrenheit.value = ((currentData - 273.32) * 1.8 + 32).toFixed(2)
             break
 
-        // default:
-        //     break;
+        default:
+            break;
     }
+    clearTimeout(resultTime)
+    resultTime = setTimeout(()=>{
+        celsius.value = ""
+        fahrenheit.value = ""
+        kelvin.value=""
+    },10000)
 
 }
