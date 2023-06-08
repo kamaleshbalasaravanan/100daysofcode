@@ -1,1 +1,31 @@
-console.log("hi")
+const celsius = document.querySelector('#celsiusbox')
+const fahrenheit = document.querySelector('#fahrenheitbox')
+const kelvin = document.querySelector('#kelvinbox')
+
+
+function calculateTemp(e) {
+    // console.log(e.target.value)
+    const currentData = + e.target.value
+    console.log(currentData)
+
+    switch (e.target.name) {
+        case "celsius":
+            fahrenheit.value = (currentData * 1.8 + 32).toFixed(2)
+            kelvin.value = (currentData + 273.32).toFixed(2)
+            break
+
+        case "fahrenheit":
+            celsius.value = ((currentData - 32) / 1.8).toFixed(2)
+            kelvin.value = ((currentData - 32) / 1.8 + 273.32).toFixed(2)
+            break
+
+        case "kelvin":
+            celsius.value = (currentData - 273.32).toFixed(2)
+            fahrenheit.value = ((currentData - 273.32) * 1.8 + 32).toFixed(2)
+            break
+
+        // default:
+        //     break;
+    }
+
+}
