@@ -16,6 +16,12 @@ body{
     height: 100vh;   
 }
 
+/* .border{
+    margin: 0;
+    padding: 0;
+    position: relative;
+} */
+
 .container{
     text-align: center;
     /* display: flex;
@@ -27,6 +33,7 @@ body{
     background: rgba(244, 246, 246, 0.863);
     color: darkcyan;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    position: relative;
 }
 
 .heading{
@@ -67,6 +74,42 @@ input::placeholder{
     color: darkgrey;
     font-size: 15px;
     text-align: center;
+}
+
+
+.container ::before{
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* color: #43e97b; */
+    border-bottom: 5px solid  transparent;
+    border-left: 5px solid transparent;
+    transition: all 0.8s ease;
+    border-radius: 2px;
+}
+
+.container ::after{
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* color: #43e97b; */
+    border-right:5px solid transparent;
+    border-top: 5px solid transparent;
+    transition: all 0.8s ease;
+    border-radius: 2px;
+}
+
+.container :hover ::before,
+.container :hover ::after{
+    width: 98.5%;
+    height: 98.5%;
+    border-color: green;
 }
 
 
