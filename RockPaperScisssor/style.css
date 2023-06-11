@@ -100,8 +100,11 @@ body{
 /* responsive */
 
 @media(max-width:500px) and (min-width:320px){
+    .content{
+        margin: 10px;
+    }
     .container{
-        padding: 30px;
+        padding: 10px;
         overflow: hidden;
     }
 
