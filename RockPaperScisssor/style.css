@@ -97,3 +97,24 @@ body{
     font-weight: 600;
 }
 
+/* responsive */
+
+@media(max-width:500px) and (min-width:320px){
+    .container{
+        padding: 30px;
+        overflow: hidden;
+    }
+
+    .heading{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .move{
+        font-size: 25px;
+    }
+    .btn{
+        width: 70px;
+        padding: 0px;
+        font-size: 15px;
+    }
+}
