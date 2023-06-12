@@ -51,3 +51,22 @@ body{
     margin: 12px 0 8px;
     margin-bottom: 10px;
 }
+
+
+#btn{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    text-transform: lowercase;
+    color: #fff;
+    background-color: #8A6CFF;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    box-shadow: 0 10px 20px rgba(52, 87, 220, 0.08);
+    transform: translateX(-50%);
+}
