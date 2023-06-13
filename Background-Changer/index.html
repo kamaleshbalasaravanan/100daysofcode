@@ -5,7 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background-changer</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+    padding: 0;   
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* position: relative; */
+}
+
+button{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    width: 250px;
+    height: 100px;
+    transform: translate(50%,50%);
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid white;
+    /* background-color: darkgrey; */
+}
+    </style>
 </head>
 <body>
     <button id="changebtn">change color</button>
@@ -19,11 +46,8 @@
 
             i < color.length ? ++i : i=0
                 document.querySelector('body').style.background = color[i]
-                button.style.color = color[i]
-            
+                button.style.color = color[i]  
         })
-
-
     </script>
 </body>
 </html>
