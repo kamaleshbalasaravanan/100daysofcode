@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="changebtn">change color</button>
+
+    <script src="main.js"></script>
+    <script>
+        const color = ["#2e1b7e","#86ccdf","#96b9c2","#9500a7","#002ca3","#acb23a","#ecf964","#7cb7ea","#75c9ce","#e72d5b"]
+        const button = document.getElementById('changebtn')
+        let i=0;
+        button.addEventListener("click",() => {
+
+            i < color.length ? ++i : i=0
+                document.querySelector('body').style.background = color[i]
+                button.style.color = color[i]
+            
+        })
+
+
+    </script>
+</body>
+</html>
