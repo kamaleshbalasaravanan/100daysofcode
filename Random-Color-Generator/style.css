@@ -71,3 +71,29 @@ body{
     box-shadow: 0 10px 20px rgba(52, 87, 220, 0.08);
     transform: translateX(-50%);
 }
+
+@media(max-width:500px) and (min-width:300px){
+    .color-container{
+        margin: 5px;
+    }
+
+    .color-container .color{
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .color .rect-box{
+        width: 150px;
+        height: 150px;
+    }
+
+    .color .hex-value{
+        font-size: 17px;
+    }
+
+    #btn{
+        font-size: 15px;
+        bottom: 30px;
+    }
+}
+
