@@ -14,7 +14,7 @@ let getQuote = () =>{
         console.log(msg.author)
 
         quotes.innerHTML = msg.content
-        author.innerHTML = `--${msg.author}--`
+        author.innerHTML = `" ${msg.author} "`
 
     })
 }
