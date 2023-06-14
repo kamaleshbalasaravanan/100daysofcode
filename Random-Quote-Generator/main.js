@@ -13,8 +13,15 @@ let getQuote = () =>{
         console.log(msg.content)
         console.log(msg.author)
 
-        quotes.innerHTML = msg.content
-        author.innerHTML = `" ${msg.author} "`
+
+        // setTimeout( () =>{
+        //     quotes.innerHTML = msg.content
+        //     author.innerHTML = `" ${msg.author} "`
+        // },1000)
+
+             quotes.innerHTML = msg.content
+            author.innerHTML = `" ${msg.author} "`
+      
 
     })
 }
