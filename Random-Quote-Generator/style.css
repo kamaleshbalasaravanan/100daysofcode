@@ -13,6 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -60,6 +61,9 @@ body{
 
 /* responsive */
 @media(max-width:500px) and (min-width:300px){
+    body{
+        overflow: hidden;
+    }
     .wrapper{
         width:300px;
         padding: 30px 20px;
