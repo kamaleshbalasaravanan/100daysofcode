@@ -3,3 +3,62 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color:  #FFBA19;
+}
+
+.container{
+    width: 500px;
+    padding: 30px 20px;
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.smile-icon{
+    margin-left: 48%;
+    text-align: center;
+    font-size: 45px;
+    /* color: skyblue; */
+    color: #FFBA19;
+    font-weight: 600;
+    /* margin-bottom: 20px; */
+}
+
+.jokes{
+    width: 100%;
+    /* padding: 10px 30px; */
+    padding: 10px 5px 10px 15px;
+    /* border: 1px solid black; */
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-size: 25px;
+    /* font-family: sans-serif; */
+    margin: 20px 0;
+    /* margin-left: 20px; */
+    /* background: #FFBA19; */
+    background: black;
+    color: #FFBA19;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-radius: 7px 35px;
+}
+
+button{
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 38%;
+    margin-top: 10px;
+    background-color: #FFBA19;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
