@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <textarea  id="myText" cols="30" rows=8" placeholder="type something here..."></textarea>
+        <textarea  id="myText" cols="30" rows=8" maxlength="200" placeholder="type something here..."></textarea>
+       <div class="result-box">
+        <p id="remaining">Remaining: 0</p>
         <p id="result">Total Character: 0</p>
+       </div>
     </div>
     <script src="main.js"></script>
 </body>
