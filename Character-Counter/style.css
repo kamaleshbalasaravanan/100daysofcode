@@ -32,10 +32,16 @@ body{
     /* overflow: hidden; */
 }
 
+.result-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 p{
     color: aliceblue;
     letter-spacing: 2px;
-    text-align: right;
+    /* text-align: right; */
     margin: 10px 0px ;
     font-size: 20px;
     font-weight: 600;
