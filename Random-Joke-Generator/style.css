@@ -30,22 +30,46 @@ body{
     /* margin-bottom: 20px; */
 }
 
-.jokes{
+.result{
     width: 100%;
     /* padding: 10px 30px; */
     padding: 10px 5px 10px 15px;
+    background: black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-radius: 7px 35px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.jokes{
+   
     /* border: 1px solid black; */
     letter-spacing: 2px;
     line-height: 1.5;
     font-size: 25px;
     /* font-family: sans-serif; */
-    margin: 20px 0;
+    padding: 10px 5px 10px 15px;
     /* margin-left: 20px; */
     /* background: #FFBA19; */
-    background: black;
+   
     color: #FFBA19;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    border-radius: 7px 35px;
+   
+}
+
+#ans{
+    width: 300px;
+    /* height: 35px; */
+    margin: 10px;
+    text-align: center;
+    background-color: #FFBA19;
+    padding: 15px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+
 }
 
 button{
@@ -61,4 +85,5 @@ button{
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
+    cursor: pointer;
 }
