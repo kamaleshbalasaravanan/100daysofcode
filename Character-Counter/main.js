@@ -1,8 +1,7 @@
 const textcontent = document.querySelector('#myText')
 const result = document.querySelector('#result')
 const remaining = document.querySelector('#remaining')
-
-
+``
 textcontent.addEventListener("input", () => {
     let len = (textcontent.value).length
     let rem = 200 -len
