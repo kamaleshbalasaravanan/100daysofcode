@@ -4,6 +4,7 @@ const author = document.querySelector('.author')
 const btn = document.querySelector('#btn')
 const copied = document.querySelector('.copied')
 
+const mediaquery = window.matchMedia('(max-width: 500px')
 const url = "https://api.quotable.io/random"
 
 let getQuote = () =>{
@@ -38,7 +39,12 @@ function copyText(value){
 
         setTimeout(() => {
         quotes.innerHTML = value
-        quotes.style.fontSize = "25px"
+        if(mediaquery.matches){
+            quotes.style.fontSize = "15px"
+        }
+        else{
+            quotes.style.fontSize = "25px"
+        }
         },1000)
     })
     // console.log(value)
