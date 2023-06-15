@@ -6,9 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form-validation</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d513c8d533.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <header>Login Form</header>
+        <form action="#">
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" placeholder="Email Address">
+                    <i class="icon fa-solid fa-envelope"></i>
+                    <i class="error error-icon fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="error error-txt">Email can't be blank</div>
+            </div>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="text" placeholder="Password ">
+                    <i class="icon fa-solid fa-lock"></i>
+                    <i class="error error-icon fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="error error-txt">Email can't be blank</div>
+            </div>
+            <div class="pass-link"><a href="#">Forget Password?</a></div>
+            <input type="submit" value="Login">
+        </form>
+        <div class="signup-link">Not yet member?<a href="#">Signup now</a></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
