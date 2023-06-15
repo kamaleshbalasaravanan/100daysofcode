@@ -24,3 +24,4 @@ let getJokes =  () =>{
 }
 // console.log(content.setup, content.delivery))
 btn.addEventListener("click", getJokes)
+window.addEventListener("load", getJokes)
