@@ -97,4 +97,17 @@ button{
     .smile-icon{
         margin-left: 43%;
     }
+    .jokes{
+        font-size: 20px;
+    }
+    #ans{
+        width: 200px;
+        font-size: 15px;
+    }
+    button{
+        width: 120px;
+        font-size: 13px;
+        margin-left: 30%;
+        margin-top: 5px;
+    }
 }
