@@ -7,7 +7,7 @@ const pField = form.querySelector('.password')
 const pInput = pField.querySelector('input') 
 
 form.onsubmit = (e) => {
-    // e.preventDefault ()
+    e.preventDefault ()
 
     if(eInput.value == ""){
         eField.classList.add('shake','error')
@@ -45,7 +45,7 @@ form.onsubmit = (e) => {
         if(!eInput.value.match(pattern)){
             eField.classList.add('error')
 
-            let errortxt = document.querySelector(".error-txt");
+            let errortxt = eField.querySelector(".error-txt");
 
             (eInput.value != "") ? errortxt.innerHTML = " Enter a valid email address" : errortxt.innerHTML = "Email can't be blank"
         }
@@ -53,7 +53,6 @@ form.onsubmit = (e) => {
             eField.classList.remove('error')
         }
     }
-
 
     if(!eField.classList.contains("error") && (!pField.classList.contains("error"))){
         // window.location.href = "#"
