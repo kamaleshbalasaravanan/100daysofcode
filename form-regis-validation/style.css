@@ -37,7 +37,7 @@ form .field{
 }
 
 form .field.shake{
-    animation: shake 0.3s ease-in-out infinite;
+    animation: shake 0.3s ease-in-out;
 }
 
 @keyframes shake{
@@ -61,10 +61,16 @@ form input{
     width: 100%;
     height: 50px;
     outline: none;
-    border-bottom: 2px solid #bfbfbf;
+    /* border: none; */
+    border-bottom: 2px;
     padding: 0px 45px;
     font-size: 18px;
     border-radius: 5px;
+    border: 2px solid #bfbfbf;
+}
+
+form .field.error input{
+    border-color: #dc3545;
 }
 
 form input::placeholder{
