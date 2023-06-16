@@ -22,7 +22,7 @@ body{
 
 .wrapper{
     width: 380px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 40px 30px 50px 30px;
     /* background: #EF629F; */
     background: #fff;
