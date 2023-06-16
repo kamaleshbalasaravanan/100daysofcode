@@ -143,6 +143,14 @@ form input[type="submit"]:hover{
 }
 
 @media (max-width:500px) and (min-width:300px){
+    body{
+        background: linear-gradient(
+            #EF629F 0,
+            #EECDA3 100%
+            )0 100% no-repeat;
+        background-size: 100% 60%;
+        overflow: hidden;
+    }
     .wrapper{
         width: 330px;
         padding: 30px 30px 40px 30px;
