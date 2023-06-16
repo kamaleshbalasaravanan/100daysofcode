@@ -147,3 +147,25 @@ form input[type = "submit"]{
 form input[type = "submit"]:hover{
     background: #2c52ed;
 }
+
+@media(max-width:500px) and (min-width:300px){
+    .wrapper{
+        width: 340px;
+    }
+
+    .wrapper header{
+        font-size: 30px;
+    }
+
+    form input{
+        height: 40px;
+    }
+
+    form input::placeholder{
+        font-size: 15px;
+    }
+
+    form .field i{
+        font-size: 16px;
+    }
+}
