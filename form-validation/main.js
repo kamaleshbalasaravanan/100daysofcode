@@ -4,13 +4,16 @@ const form = document.querySelector("form")
 const eField = form.querySelector('.email')
 const eInput = eField.querySelector('input')
 const pField = form.querySelector('.password')
-const pInput = eField.querySelector('input') 
+const pInput = pField.querySelector('input') 
 
 form.onsubmit = (e) => {
     // e.preventDefault ()
 
     if(eInput.value == ""){
         eField.classList.add('shake','error')
+    }
+    else{
+        checkmail()
     }
 
     if(pInput.value == ""){
@@ -25,16 +28,7 @@ form.onsubmit = (e) => {
 
 
     eInput.onkeyup = () => {
-        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
-        if(!eInput.value.match(pattern)){
-            eField.classList.add('error')
-
-            // let errorTxt = eField.querySelector(".error-txt");
-            // (eInput.value != "") ? errorTxt.innerHTML = "Enter a valid email" : errorTxt.innerHTML = "Email can't be blank"
-        }
-        else{
-            eField.classList.remove('error')
-        }
+        checkmail()
     }
 
     pInput.onkeyup = () => {
@@ -44,5 +38,25 @@ form.onsubmit = (e) => {
         else{
             pField.classList.remove('error')
         }
+    }
+
+    function checkmail(){
+        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+        if(!eInput.value.match(pattern)){
+            eField.classList.add('error')
+
+            let errortxt = document.querySelector(".error-txt");
+
+            (eInput.value != "") ? errortxt.innerHTML = " Enter a valid email address" : errortxt.innerHTML = "Email can't be blank"
+        }
+        else{
+            eField.classList.remove('error')
+        }
+    }
+
+
+    if(!eField.classList.contains("error") && (!pField.classList.contains("error"))){
+        // window.location.href = "#"
+        console.log("Form submitted successfully")
     }
 }
