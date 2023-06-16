@@ -55,6 +55,11 @@ form.onsubmit = (e) => {
     rpInput.onkeyup = () => {
         checkpassw()
     }
+
+
+    if((!eField.classList.contains('error')) && (!pField.classList.contains('error')) && (!rpField.classList.contains('error'))  ){
+        location.href = form.getAttribute("action")
+    }
 }
 
 function checkmail() {
@@ -78,7 +83,6 @@ function createPassw() {
 
     if (!pInput.value.match(passPattern)) {
         pField.classList.add('error')
-
         let errortxt = pField.querySelector(".error-txt");
 
         (pInput.value != "") ? errortxt.innerHTML = "Please enter alteast 8 character with number,symbol,small and capital letter." : errortxt.innerHTML = "Password can't be blank"
@@ -86,21 +90,58 @@ function createPassw() {
     }
     else {
         pField.classList.remove('error')
+
     }
 }
 
 function checkpassw() {
     if(pInput.value !== rpInput.value || rpInput === ""){
         rpField.classList.add('error')
-    }
-    else{
-        if(pInput.value === rpInput.value){
-            rpField.classList.add('error')
-            let errortxt = rpField.querySelector(".error-txt");
-            let errorvalue = pField.querySelector(".error-txt")
-            errortxt.innerHTML = "Password matched"
-            pField.classList.a
-        }
+        rpField.classList.remove('success')
 
+        let errortxt = rpField.querySelector(".error-txt");
+        errortxt.style.color = "#dc354";
+        (pInput.value !== rpInput.value) ? errortxt.innerHTML = "Password doesn't match1" :  errortxt.innerHTML = "Password can't be blank"
+        
+    }
+    // if(pInput.value === rpInput.value){
+        // if(pInput.value === rpInput.value){
+        //     rpField.classList.add('error')
+        //     let errortxt = rpField.querySelector(".error-txt");
+        //     let errorvalue = pField.querySelector(".error-txt")
+        //     errortxt.innerHTML = "Password matched"
+        //     errortxt.style.color = "green"
+        //     pField.classList.add('success')
+        //     rpField.classList.add('success')
+        // }
+        // let error = rpField.classList.add('error')
+        // error.style.borderColor = "none"
+    //     let errortxt = rpField.querySelector(".error-txt");
+    //     errortxt.innerHTML = "Password matched"
+    // }
+
+    else{
+        rpField.classList.remove('error')
+        // pField.classList.remove('error')
+        rpField.classList.add('success')
+        // pField.classList.add('success')
+        let errortxt = rpField.querySelector(".error-txt");
+        // let pwerrortxt = pField.querySelector(".error-txt");
+
+        // errortxt.style.color = "green";
+        // let rpwerror = pField.querySelector(".error-txt")
+        // (pInput.value == rpInput.value) ? errortxt.innerHTML = "Password match" : errortxt.innerHTML = "Password can't be blank";
+        // (pInput.value == rpInput.value) ? pwerrortxt.innerHTML = "Password match" : pwerrortxt.innerHTML = "Password can't be blank";
+
+        // (pInput.value == rpInput.value) ? console.log("Password match") :  console.log( "Password can't be blank")
+        if(pInput.value == rpInput.value){
+            errortxt.innerHTML = "Password match"
+            // errortxt.style.color = "green";
+        }
+        else{
+            errortxt.innerHTML = "Password dosn't match"
+            errortxt.style.color = "red";
+        }
+        
     }
 }
