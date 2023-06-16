@@ -149,8 +149,13 @@ form input[type = "submit"]:hover{
 }
 
 @media(max-width:500px) and (min-width:300px){
+
+    body{
+        overflow: hidden;
+    }
     .wrapper{
         width: 340px;
+        margin-bottom: 170px;
     }
 
     .wrapper header{
