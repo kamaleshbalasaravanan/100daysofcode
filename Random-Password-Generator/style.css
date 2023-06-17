@@ -13,7 +13,7 @@ body{
 }
 
 .container{
-    margin: 20px;
+    margin: 12%;
     width: 90%;
     max-width: 700px;
     /* border: 1px solid white; */
@@ -88,10 +88,13 @@ body{
         overflow: hidden;
     }
     .container{
-        margin: 12%;
+        /* margin: 15%; */
+        margin-left: 20px;
         width: 90%;
         max-width: 500px;
         padding: 20px;
+        /* overflow: hidden; */
+
     }
 
     .container h1{
@@ -105,5 +108,9 @@ body{
 
     .display input{
         width: 280px;
+    }
+    .copy{
+        font-size: 30px;
+        margin-right: 10px;
     }
 }
