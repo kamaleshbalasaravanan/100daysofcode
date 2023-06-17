@@ -3,19 +3,27 @@ const copytext = document.querySelector('.copy')
 const btn = document.querySelector('#btn')
 
 btn.addEventListener("click",genPassword)
+copytext.addEventListener("click",copyText)
 
 function genPassword(){
     console.log('password')
     let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let passwordlen = 8
-    let password = ""
+    let passwordval = ""
 
     for(let i = 0; i<=passwordlen; i++){
         let randomnum = Math.floor(Math.random() * chars.length)
-        password += chars.substring(randomnum, randomnum+1)
+        passwordval += chars.substring(randomnum, randomnum+1)
     }
 
-    // password.value = password
-    document.getElementById("password").value= password
+    password.value = passwordval
+    // document.getElementById("password").value= password
     
+}
+
+function copyText(){
+    let copyval = document.getElementById("password")
+    copyval.select()
+    copyval.setSelectionRange(0,999)
+    document.execCommand("copy")
 }
