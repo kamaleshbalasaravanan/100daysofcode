@@ -22,6 +22,7 @@ function genPassword(){
 }
 
 function copyText(){
+    console.log("textcopied")
     let copyval = document.getElementById("password")
     copyval.select()
     copyval.setSelectionRange(0,999)
