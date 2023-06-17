@@ -30,6 +30,7 @@ body{
     justify-content: space-between;
     border-radius: 5px;
     padding: 30px 20px;
+    position: relative;
 }
 
 .container h1{
@@ -41,6 +42,11 @@ body{
     color: #019f55;
     border-bottom: 4px solid #019f55 ;
     padding-bottom: 7px ;
+}
+
+.display span{
+    position: absolute;
+    left: 92%;
 }
 
 .copy{
@@ -102,15 +108,16 @@ body{
     }
 
     .display{
-        width: 95%;
+        width: 100%;
         padding: 20px 10px;
     }
 
     .display input{
-        width: 290px;
+        width: 300px;
     }
-    .copy{
-        font-size: 30px;
-        margin-right: 30px;
+
+    .display span{
+        left: 88%;
     }
+
 }
