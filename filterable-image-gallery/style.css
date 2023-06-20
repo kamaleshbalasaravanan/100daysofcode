@@ -75,7 +75,7 @@ button.active{
 
 .card-title{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     color: #333;
 }
 
@@ -84,3 +84,56 @@ button.active{
     color: #333;
 }
 
+/* responsive */
+
+@media(max-width:700px) and (min-width:500px){
+    .container{
+        max-width: 550px;
+    }
+
+    button{
+        font-size: 15px;
+    }
+
+    .cards{
+        flex-basis: 230px;
+    }
+
+    .cards img{
+        height: 190px;
+    }
+    .card-title{
+        font-size: 18px;
+    }
+
+    .card-text{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:500px) and (min-width:300px){
+    .container{
+        /* max-width: 400px; */
+        margin: 5px;
+    }
+
+    button{
+        padding: 7px 14px;
+        font-size: 15px;
+    }
+
+    .cards{
+        flex-basis: 175px;
+    }
+
+    .cards img{
+        height: 140px;
+    }
+    .card-title{
+        font-size: 16px;
+    }
+
+    .card-text{
+        font-size: 14px;
+    }
+}
