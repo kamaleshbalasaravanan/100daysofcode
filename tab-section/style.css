@@ -21,12 +21,13 @@ body{
 
 .tabs{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
+    transition: 0.7s ease-in-out;
 }
 
 .tabs h3{
     background-color: #e4e9fd;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     padding: 15px 0;
     cursor: pointer;
@@ -34,6 +35,10 @@ body{
     /* border-left-top: ; */
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.tabs h3:hover{
+    background-color: antiquewhite;
 }
 
 .tab-content{
@@ -45,6 +50,7 @@ body{
     color: #000224;
     font-size: 25px;
     font-weight: 600;
+    text-transform: uppercase;
     margin-bottom: 20px;
 }
 
