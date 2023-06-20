@@ -58,6 +58,10 @@ button.active{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+.cards.hide{
+    display: none;
+}
+
 .cards img{
     width: 100%;
     height: 210px;
