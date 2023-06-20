@@ -7,3 +7,65 @@
 body{
     background-color: antiquewhite;
 }
+
+.container{
+    width: 800px;
+    /* border: 1px solid white; */
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tabs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.tabs h3{
+    background-color: #e4e9fd;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 0;
+    cursor: pointer;
+    text-align: center;
+    /* border-left-top: ; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tab-content{
+    background-color: #fff;
+    padding: 50px 40px;
+}
+
+.tab-content h4{
+    color: #000224;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.tab-content p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    color: #202238;
+    text-align: justify;
+}
+
+.tab-content div{
+    display: none;
+}
+
+.tab-content .active{
+    display: block;
+}
+
+.tabs .active{
+    background-color: #fff;
+}
