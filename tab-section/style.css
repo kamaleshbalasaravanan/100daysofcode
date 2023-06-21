@@ -17,12 +17,15 @@ body{
     background-color: #fff;
     transform: translate(-50%, -50%);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* border-radius: 2px;
+    padding: 20px; */
 }
 
 .tabs{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    transition: 0.7s ease-in-out;
+    /* border-top-left-radius: 20px; */
+  
 }
 
 .tabs h3{
@@ -35,6 +38,7 @@ body{
     /* border-left-top: ; */
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
 }
 
 .tabs h3:hover{
@@ -62,7 +66,29 @@ body{
     letter-spacing: 1px;
     color: #202238;
     text-align: justify;
+    /* animation: shake 0.3s ease-in-out infinite; */
+
 }
+
+
+
+/* .tab-content.shake{
+    animation: shake 0.3s ease-in-out forwards;
+}
+
+@keyframes shake{
+    0%, 100%{
+        margin-bottom: 0;
+    }
+    20% , 80%{
+        margin-bottom: -12px;
+    }
+    40%, 60%{
+        margin-bottom: 12px;
+    }
+} */
+
+
 
 .tab-content div{
     display: none;
