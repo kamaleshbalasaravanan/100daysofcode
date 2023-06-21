@@ -137,3 +137,52 @@ ul{
     margin-top: 10px;
     color: #dc3545;;
 }
+
+@media screen and (max-width:500px) {
+    .container{
+        font-size: 14px;
+        max-width: 320px;
+    }
+
+
+}
+
+@media (max-width:500px) and (min-width:320px){
+    .container{
+        font-size: 14px;
+        max-width: 320px;
+    }
+
+    .search-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        gap: 20px;
+    }
+
+    .search-container input{
+        font-size: 15px;
+        width: 200px;
+        margin-left: -19px;
+    }
+
+    .search-btn {
+        width: 65px;
+        font-size: 15px;
+        /* margin-right: 10px; */
+    }
+
+    .details h2{
+        font-size: 18px;
+    }
+
+    .details h4{
+        font-size: 15px;
+    }
+
+    #show-recipe{
+        left: 60%;
+        font-size: 16px;
+    }
+
+}
