@@ -148,6 +148,10 @@ ul{
 }
 
 @media (max-width:500px) and (min-width:320px){
+
+    body{
+        overflow: hidden;
+    }
     .container{
         font-size: 14px;
         max-width: 320px;
