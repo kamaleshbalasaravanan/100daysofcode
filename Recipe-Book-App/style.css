@@ -47,3 +47,85 @@ body{
     cursor: pointer;
     border-radius: 5px;
 }
+
+img{
+    display: block;
+    width: 50%;
+    /* top: 50%; */
+    margin: 28px auto 0 auto ;
+}
+
+#recipe{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    top: 0%;
+    left: 0%;
+    border-radius: 10px;
+    z-index: 2;
+    display: none;
+}
+
+.details{
+    background-color: #f4c531;
+    position: relative;
+    margin-top: -10px ;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.details h2{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.details h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#recipe pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 40px 18px 20px 18px;
+}
+
+
+#hide-recipe{
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: #f4c531;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    top: 20px;
+    left: 90%;
+    border-radius: 5px;
+}
+
+#show-recipe{
+    background-color: #f4c531;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    /* margin: 10px; */
+    position: relative;
+    top: 20px;
+    left: 65%;
+    cursor: pointer;
+}
+
+ul{
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 13px 20px;
+    padding: 18px 0 0 19px;
+}
