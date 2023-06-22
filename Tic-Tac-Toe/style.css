@@ -24,6 +24,15 @@ body{
 
 }
 
+.heading{
+    color: green;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 35px;
+    letter-spacing: 2px;
+}
+
 .container{
     width: 600px;
     margin-left: 200px;
