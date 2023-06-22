@@ -135,10 +135,10 @@ body{
     }
 
     #restartBtn{
-        margin-left: 80px;
+        /* margin-left: 80px; */
     }
 
     .statusText{
-        margin-left: 80px;
+        /* margin-left: 80px; */
     }
 }
