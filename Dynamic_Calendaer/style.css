@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+*::selection{
+    background-color: darksalmon;
+    color: #fff;
+}
 body{
     background-color: darksalmon;
     width: 100%;
@@ -17,6 +21,7 @@ body{
     width: 450px;
     background-color: #fff;
     border-radius: 10px;
+
 }
 
 .wrapper header{
@@ -54,7 +59,27 @@ header .currentdate{
 .calender{
     padding: 20px;
 }
+.calender .weeks li{
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
+/* .calender .weeks li{
+    width: calc(100% / 7);
+} */
+
+.calender .days{
+    margin-bottom: 20px;
+}
+
+.calender .days li{
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    /* width: calc(100% / 7); */
+
+}
 .calender ul{
     display: flex;
     flex-wrap: wrap;
@@ -64,4 +89,33 @@ header .currentdate{
 
 .calender ul li{
     width: calc(100% / 7);
+    /* border: 1px solid; */
+}
+
+.calender .days li::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.calender .days li:hover::before{
+    background-color: #f2f2f2;
+}
+
+.calender .days li.inactive{
+    color: #aaa;
+}
+
+.calender .days li.active{
+    color: #fff;
+}
+
+.calender .days li.active::before{
+    background-color: darksalmon;
 }
