@@ -40,11 +40,14 @@ header .icons i{
     line-height: 38px;
     cursor: pointer;
     border-radius: 50%;
-    margin: 0 2px;
+    /* margin: 0 2px; */
 }
 
 header .icons i:hover{
     background-color: #f2f2f2;
+}
+header .icons i:first-child{
+    margin-left: -10px;
 }
 
 header .icons i:last-child{
