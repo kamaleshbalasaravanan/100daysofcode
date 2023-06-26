@@ -10,7 +10,7 @@ let currentyear = date.getFullYear()
 let currentmonth = date.getMonth()
 console.log(currentyear, currentmonth)
 
-let months = ['January','February','March','April','May','June','August','September','October','November','December']
+let months = ['January','February','March','April','May','June','July','August','September','October','November','December']
 
 let renderCalender = () => {
 
@@ -40,7 +40,7 @@ let renderCalender = () => {
     }
 
     for(let i = lastdayofMonth; i<6; i++){
-        liTag += `<li class="inactive">${i-lastdayofMonth  + 1}</li>`
+        liTag += `<li class="inactive">${i-lastdayofMonth+1}</li>`
     }
     currentdate.innerHTML = `${months[currentmonth]} ${currentyear}`
     daysTag.innerHTML = liTag
@@ -50,6 +50,16 @@ prevnextIcon.forEach(icon =>{
     icon.addEventListener("click",()=>{
         // console.log(icon)
         currentmonth = icon.id == "prev" ? currentmonth-1 : currentmonth+1
+
+        if(currentmonth <= 0 || currentmonth > 11) {
+            date = new Date(currentyear, currentmonth)
+            currentyear = date.getFullYear()
+            currentmonth = date.getMonth()
+        }
+
+        else{
+            date = new Date()
+        }
         renderCalender()
     })
 })
