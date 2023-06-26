@@ -120,13 +120,13 @@ header .currentdate{
 }
 
 .calender .days li.active{
-    color: darksalmon;
-    font-weight: 700;
+    color: #fff;
+    /* font-weight: 700; */
 
 }
 
 .calender .days li.active::before{
-    /* background-color: darksalmon; */
+    background-color: darksalmon;
 }
 
 /* reponsive */
