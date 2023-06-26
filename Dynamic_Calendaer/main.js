@@ -33,8 +33,8 @@ let renderCalender = () => {
 
     for(let i=1; i<=lastDateofMonth; i++){
         // console.log(i)
-        let isToday = i === date.getDate() && currentmonth === date.getMonth() 
-        && currentyear === date.getFullYear() ? "active"  : ""
+        let isToday = i === date.getDate() && currentmonth === new Date().getMonth() 
+        && currentyear === new Date().getFullYear() ? "active"  : ""
 
         liTag += `<li class="${isToday}">${i}</li>`
     }
@@ -51,7 +51,7 @@ prevnextIcon.forEach(icon =>{
         // console.log(icon)
         currentmonth = icon.id == "prev" ? currentmonth-1 : currentmonth+1
 
-        if(currentmonth <= 0 || currentmonth > 11) {
+        if(currentmonth <0 || currentmonth > 11) {
             date = new Date(currentyear, currentmonth)
             currentyear = date.getFullYear()
             currentmonth = date.getMonth()
