@@ -106,8 +106,9 @@ header .currentdate{
     transform: translate(-50%, -50%);
     height: 40px;
     width: 40px;
-    border-radius: 50%;
+    border-radius: 50%;  
     z-index: -1;
+    /* padding: 50% 0; */
 }
 
 .calender .days li:hover::before{
@@ -119,16 +120,31 @@ header .currentdate{
 }
 
 .calender .days li.active{
-    color: #fff;
+    color: darksalmon;
+    font-weight: 700;
+
 }
 
 .calender .days li.active::before{
-    background-color: darksalmon;
+    /* background-color: darksalmon; */
 }
 
 /* reponsive */
 
 @media (max-width:500px){
+    .wrapper{
+        width: 380px;
+    }
+    .header .icons i{
+        font-size: 20px;
+    }
+
+    header .currentdate{
+        font-size: 20px;
+    }
+
+    .calender .weeks li{
+        font-size: 16px;@media (max-width:500px){
     .wrapper{
         width: 380px;
     }
@@ -147,10 +163,16 @@ header .currentdate{
     .calender .days li{
         font-size: 16px;
     }
-    .calender .days li::before{
-        height: 35px;
-        width: 35px;
-    }
+
 
 
 }
+    }
+
+    .calender .days li{
+        font-size: 16px;
+    }
+
+
+
+} 
