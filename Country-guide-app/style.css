@@ -82,3 +82,31 @@ img{
     text-transform: uppercase;
 }
 
+@media(max-width:500px){
+    .container{
+        max-width: 350px;
+        font-size: 14px;
+    }
+    .search-container{
+        grid-template-rows: 7fr 4fr;
+        gap: 10px;
+    }
+    .search-container input{
+        font-size: 15px;
+        width:100%;
+        padding: 5px;
+    }
+
+    .search-btn{
+        margin: 10px 0px;
+    }
+
+    .details p{
+        font-size: 18px;
+    }
+
+    .details b{
+        font-size: 16px;
+        padding-right: 7px;
+    }
+}
