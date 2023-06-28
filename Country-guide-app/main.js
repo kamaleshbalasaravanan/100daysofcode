@@ -4,8 +4,8 @@ const searchBtn = document.querySelector('.search-btn')
 const userInp = document.querySelector('#user-inp')
 
 searchBtn.addEventListener("click",()=>{
-    // let countryName = userInp.value
-    let countryName = "India"
+    let countryName = userInp.value
+    // let countryName = "Pakistan"
     console.log(countryName)
     let finalUrl = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`
     // console.log(finalUrl)
@@ -17,6 +17,10 @@ searchBtn.addEventListener("click",()=>{
         console.log(data[0].continents[0])
         console.log(data[0].population)
         console.log(data[0].flags.svg)
+        console.log(Object.keys(data[0].currencies)[0])
+        console.log(data[0].currencies[Object.keys(data[0].currencies)].name)
+        console.log(Object.values(data[0].languages).toString().split(",").join(", "))
+
         let country = data[0]
 
         result.innerHTML =`
@@ -26,10 +30,17 @@ searchBtn.addEventListener("click",()=>{
                 <p> <b>Capital:</b> ${country.capital[0]} </p>
                 <p> <b>Continent:</b> ${country.continents[0]} </p>
                 <p> <b>Population:</b> ${country.population} </p>
-                <p> <b>Currency:</b> Indian rupee - INR </p>
-                <p> <b>Comman Language:</b>${country.languages} </p>
-
+                <p> <b>Currency:</b> ${Object.keys(data[0].currencies)[0]} - ${data[0].currencies[Object.keys(data[0].currencies)].name} </p>
+                <p> <b>Comman Language:</b> ${Object.values(data[0].languages).toString().split(",").join(", ")} </p>
             </div>
         `
+    })
+    .catch(() =>{
+        if(countryName.length == 0){
+            result.innerHTML = `<h3 class="error">The Input Field Cannot be Empty</h3>`
+        }
+        else{
+            result.innerHTML = `<h3 class="error">Please Enter the Valid Country Name</h3>`
+        }
     })
 })
