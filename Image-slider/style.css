@@ -4,8 +4,16 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    overflow: hidden;
+
 }
 
 body{
-    background-color: thistle;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d212b;
+    /* background-color: thistle; */
 }
+
