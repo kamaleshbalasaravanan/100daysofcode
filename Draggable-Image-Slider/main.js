@@ -4,10 +4,26 @@ const icons = document.querySelectorAll('.wrapper i')
 console.log(firstImg)
 
 let isdragStart = false
-let prevPageX, prevScrollLeft
+let prevPageX, prevScrollLeft, positionDiff
 // console.log(carousel.scrollWidth, carousel.clientWidth)
 // console.log(scrollWidth)
 
+
+// const autoSlide = () => {
+
+//     if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return
+//     positionDiff = Math.abs(positionDiff)
+//     let firstImgWidth = firstImg.clientWidth + 10
+//     let valDiff = firstImgWidth - positionDiff
+
+//     if (carousel.scrollLeft > prevScrollLeft) {
+//         return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDiff : -positionDiff
+//         // console.log("user is scrolling to the right")
+//     }
+//     else{
+//         carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDiff : -positionDiff
+//     }
+// }
 
 const showHiddenIcons = () => {
     let scrollWidth = carousel.scrollWidth - carousel.clientWidth
@@ -29,14 +45,14 @@ const dragStart = (e) => {
     isdragStart = true
     prevPageX = e.pageX
     prevScrollLeft = carousel.scrollLeft
-    console.log(prevPageX, prevScrollLeft)
+    // console.log(prevPageX, prevScrollLeft)
 }
 
-const dragging = (e) =>{
+const dragging = (e) => {
     // console.log(e.pageX)
-    if(!isdragStart) return
+    if (!isdragStart) return
     e.preventDefault()
-    let positionDiff = e.pageX - prevPageX
+    positionDiff = e.pageX - prevPageX
     // carousel.scrollLeft = e.pageX
     carousel.classList.add("dragging")
     carousel.scrollLeft = prevScrollLeft - positionDiff
@@ -44,13 +60,14 @@ const dragging = (e) =>{
 
 }
 
-const dragStop = () =>{
+const dragStop = () => {
     isdragStart = false
     carousel.classList.remove("dragging")
+    // autoSlide()
 }
 
-carousel.addEventListener("mousedown",dragStart)
+carousel.addEventListener("mousedown", dragStart)
 carousel.addEventListener("mousemove", dragging)
-carousel.addEventListener("mouseup",dragStop)
-carousel.addEventListener("mouseleave",dragStop)
+carousel.addEventListener("mouseup", dragStop)
+carousel.addEventListener("mouseleave", dragStop)
 
