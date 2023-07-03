@@ -43,7 +43,14 @@ body{
     width: 100%;
     z-index: 1;
     position: absolute;
+    clip-path: circle(0% at 0 50%);
 }
+
+.img-slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 1.5s;
+    transition-property: clip-path;
+}   
 
 .img-slider .slide img{
     z-index: 1;
@@ -91,6 +98,11 @@ body{
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+}
+
+.img-slider .navigation .btn.active{
+    background: #2696e9;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 /* responsive */
