@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,11 +6,11 @@
     scroll-behavior: smooth;
 }
 
-img{
+img {
     width: 100%;
 }
 
-body{
+body {
     background-color: lightpink;
     display: flex;
     justify-content: center;
@@ -19,13 +19,13 @@ body{
     padding: 0 30px;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1100px;
     width: 100%;
     position: relative;
 }
 
-.wrapper i{
+.wrapper i {
     background: #fff;
     width: 50px;
     height: 50px;
@@ -36,34 +36,34 @@ body{
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY( -50%);
+    transform: translateY(-50%);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.wrapper i:first-child{
+.wrapper i:first-child {
     left: -22px;
 }
 
-.wrapper i:last-child{
+.wrapper i:last-child {
     right: -22px;
 }
 
-.wrapper .carousel{
-    display: grid;   
+.wrapper .carousel {
+    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 12px);
     gap: 16px;
     overflow: hidden;
 }
 
-.carousel :where(.card, .img){
+.carousel :where(.card, .img) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.carousel .card{
+.carousel .card {
     background: #fff;
     height: 342px;
     border-radius: 10px;
@@ -75,14 +75,14 @@ body{
     cursor: pointer;
 }
 
-.card .img{
+.card .img {
     background-color: lightpink;
     width: 148px;
     height: 148px;
     border-radius: 50%;
 }
 
-.card .img img{
+.card .img img {
     width: 140px;
     height: 140px;
     object-fit: cover;
@@ -91,13 +91,28 @@ body{
     border: 4px solid #fff;
 }
 
-.card h2{
+.card h2 {
     font-size: 24px;
     font-weight: 500;
     margin: 30px 0 5px;
 }
 
-.card span{
+.card span {
     font-size: 20px;
     color: #6a6d78;
+}
+
+
+/* responsive */
+
+@media screen and (max-width:900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media (max-width:600px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc(100%);
+    }
 }
