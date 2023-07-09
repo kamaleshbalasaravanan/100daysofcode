@@ -1,8 +1,21 @@
 // console.log('hi')
 const carousel = document.querySelector('.carousel')
+const icons = document.querySelectorAll('.wrapper i')
+const firstCardWidth = carousel.querySelector('.card').offsetWidth
+// console.log(firstCardWidth)
 
 let isdragStart = false
 let startX, startScrollLeft
+
+icons.forEach((icon) =>{
+    icon.addEventListener("click", () => {
+        // console.log(icon.id)
+        console.log(carousel.scrollLeft)
+        carousel.scrollLeft += icon.id == "left" ? -firstCardWidth :firstCardWidth
+    })
+})
+
+
 const dragStart = (e) => {
     // console.log("mousedown")
     isdragStart = true
