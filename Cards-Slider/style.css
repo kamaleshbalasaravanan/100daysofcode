@@ -56,9 +56,17 @@ body {
     background: #000; */
     display: grid;
     grid-auto-flow: column;
+    /* doubt */
     grid-auto-columns: calc((100% / 3) - 12px);
     gap: 16px;
     overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
 }
 
 .carousel :where(.card, .img) {
@@ -66,6 +74,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.carousel.dragging{
+    scroll-behavior: auto;
+    scroll-snap-type: none;
 }
 
 .carousel.dragging .card{
@@ -83,6 +96,7 @@ body {
     flex-direction: column;
     padding-bottom: 20px;
     cursor: pointer;
+    scroll-snap-align: start;
 }
 
 .card .img {
