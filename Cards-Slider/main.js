@@ -7,11 +7,21 @@ const firstCardWidth = carousel.querySelector('.card').offsetWidth
 let isdragStart = false
 let startX, startScrollLeft
 
-icons.forEach((icon) =>{
+
+const showHiddenIcons = () => {
+    let scrollingWidth = carousel.scrollWidth - carousel.clientWidth
+    icons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block"
+    icons[1].style.display = carousel.scrollLeft == scrollingWidth ? "none" : "block"
+}
+
+icons.forEach((icon) => {
     icon.addEventListener("click", () => {
         // console.log(icon.id)
+        console.log(carousel.scrollWidth)
+        console.log(carousel.clientWidth)
         console.log(carousel.scrollLeft)
-        carousel.scrollLeft += icon.id == "left" ? -firstCardWidth :firstCardWidth
+        carousel.scrollLeft += icon.id == "left" ? -firstCardWidth : firstCardWidth
+        setTimeout(() => showHiddenIcons(), 60)
     })
 })
 
@@ -31,11 +41,12 @@ const dragStop = (e) => {
     // console.log(e.pageX)
 }
 
-const dragging = (e) =>{
+const dragging = (e) => {
     // console.log("dragging"+e.pageX)
-    if(!isdragStart) return
+    if (!isdragStart) return
     // console.log("dragStart")
     carousel.scrollLeft = startScrollLeft - (e.pageX - startX)
+    showHiddenIcons()
 }
 
 

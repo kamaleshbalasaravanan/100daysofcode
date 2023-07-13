@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1100px;
+    max-width: 1700px;
     width: 100%;
     position: relative;
     padding: 10px;
@@ -45,6 +45,7 @@ body {
 
 .wrapper i:first-child {
     left: -22px;
+    display: none;
 }
 
 .wrapper i:last-child {
@@ -57,9 +58,10 @@ body {
     display: grid;
     grid-auto-flow: column;
     /* doubt */
-    grid-auto-columns: calc((100% / 3) - 12px);
-    gap: 16px;
-    overflow: hidden;
+    grid-auto-columns: calc((100% / 5) - 12px);
+    gap: 20px;
+    /* overflow: hidden; */
+    overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scrollbar-width: 0;
@@ -69,17 +71,17 @@ body {
     display: none;
 }
 
-.carousel :where(.card, .img) {
+/* .carousel :where(.card, .img) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} */
 
 .carousel.dragging{
     scroll-behavior: auto;
     scroll-snap-type: none;
-}
+} 
 
 .carousel.dragging .card{
     cursor: grab;
@@ -88,31 +90,36 @@ body {
 
 .carousel .card {
     background: #fff;
-    height: 342px;
+    height: 610px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     cursor: pointer;
     scroll-snap-align: start;
 }
 
 .card .img {
-    background-color: lightpink;
-    width: 148px;
-    height: 148px;
-    border-radius: 50%;
+    /* background-color: lightpink; */
+    /* width: 148px; */
+    /* height: 148px; */
+    width: 90%;
+    height: 450px;
+    /* border-radius: 50%; */
 }
 
 .card .img img {
-    width: 140px;
-    height: 140px;
+    /* width: 140px; */
+    /* height: 140px; */
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 50%;
-    border: 4px solid #fff;
+    /* border-radius: 50%; */
+    border-radius: 10px;
+    /* border: 4px solid #fff; */
 }
 
 .card h2 {
