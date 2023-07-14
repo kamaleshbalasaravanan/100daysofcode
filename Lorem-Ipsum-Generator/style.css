@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 30px 10px;
+    background-color: yellow;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+section{
+    padding: 40px 7%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    border: 1px solid black;
+}
+
+input{
+    margin: 0px 20px;
+    width: 64px;
+    padding: 8px;
+    border-radius: 4px ;
+    outline: none;
+    background-color: yellow;
+    border: none;
+    font-size: 24px;
+}
+
+button{
+    margin: 10px 20px;
+    padding: 8px;
+    outline: none;
+    background-color: yellow;
+    border: none;
+    font-size: 24px;
+    border-radius: 4px ;
+}
