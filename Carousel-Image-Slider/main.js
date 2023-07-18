@@ -11,6 +11,15 @@ icons.forEach((icon) => {
         const activeslide = slides.querySelector("[data-active")
         // console.log(activeslide)
         let newIndex = [...slides.children].indexOf(activeslide) + offset
-        console.log(newIndex)
+        // console.log(newIndex)
+        if(newIndex < 0){
+            newIndex = slides.children.length - 1
+        }
+        if(newIndex >= slides.children.length){
+            newIndex = 0
+        }
+
+        slides.children[newIndex].dataset.active = true
+        delete activeslide.dataset.active
     }) 
 })
