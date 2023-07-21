@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-color: #a4152c;
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+section{
+    padding: 50px 10%;
+}
+
+.wrapper{
+    max-width: 100%;
+    padding: 10px;
+}
+
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+}
