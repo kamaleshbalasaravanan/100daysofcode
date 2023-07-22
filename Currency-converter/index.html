@@ -6,12 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d513c8d533.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-
-    <script src="main.js"></script>
-    <script src="api-key.js"></script>
+    <div class="container">
+        <div class="app-details">
+            <h1 class="tittle">Currency Converter</h1>
+        </div>
+        <form action="#">
+            <label>Amount:</label>
+            <input type="number" id="amount" placeholder="Enter the amount">
+        </form>
+        <div class="dropdowns">
+            <select id="form-currency-select"><span></span></select>
+            <select id="to-currency-select"></select>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <button id="btn">Convert</button>
+        <p id="result"></p>
+    </div>
     <script src="currency-code.js"></script>
+    <script src="api-key.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
