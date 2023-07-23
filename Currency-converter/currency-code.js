@@ -1,5 +1,4 @@
 let currencies = [
-    "USD",
     "AFN",
     "ALL",
     "AMD",
@@ -145,6 +144,7 @@ let currencies = [
     "TZS",
     "UAH",
     "UGX",
+    "USD",
     "UYU",
     "UZS",
     "VES",
