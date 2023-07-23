@@ -145,3 +145,31 @@ button{
     color: #02020c;
     background-color: rgb(38, 205, 196);
 }
+
+
+/* responsive */
+@media(max-width:560px){
+    .container{
+        max-width: 430px;
+    }
+
+    .tittle{
+        font-size: 27px;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media(max-width:380px){
+    .container{
+        max-width: 350px;
+    }
+
+    .tittle{
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+    button{
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}
