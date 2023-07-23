@@ -2,9 +2,12 @@
 const api =`https://v6.exchangerate-api.com/v6/76de6c86223b7343827ef161/latest/USD`
 const fromDropDown = document.querySelector('#form-currency-select')
 const toDropDown = document.querySelector('#to-currency-select')
-const result = document.querySelector('#result')
+// const display = document.querySelector('#')
+const fromresult = document.querySelector('#from-currency-rate')
+const toresult = document.querySelector('#to-currency-rate')
+
 //  console.log(fromDropDown, toDropDown)
-console.log(currencies)
+// console.log(currencies)
 
 currencies.forEach((currency) => {
     const option = document.createElement("option");
@@ -25,12 +28,14 @@ currencies.forEach((currency) => {
 
 fromDropDown.value = "USD"
 toDropDown.value = "INR"
+fromresult.innerHTML = "-"
+toresult.innerHTML = '-'
 
 let convertCurrency = () =>{
     const amount = document.querySelector('#amount').value
     const fromCurrency = fromDropDown.value
     const toCurrency = toDropDown.value
-    console.log(amount)
+    // console.log(amount)
 
     if(amount.length != 0){
         // alert('okay')
@@ -40,7 +45,9 @@ let convertCurrency = () =>{
         // console.log()
         const fromExchangeRate = data.conversion_rates[fromCurrency]
         const toExchangeRate = data.conversion_rates[toCurrency]
-        // console.log(fromExchangeRate, toExchangeRate)
+        console.log(fromExchangeRate, toExchangeRate)
+        fromresult.innerHTML = `${fromExchangeRate}`
+        toresult.innerHTML = `${toExchangeRate}`
         let convertedAmount = (amount / fromExchangeRate) * toExchangeRate
         result.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`
         })
