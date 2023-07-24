@@ -60,3 +60,5 @@ formEl.addEventListener("submit", (e) => {
 showMore.addEventListener("click", () => {
     searchImages()
 })
+
+window.addEventListener("load", searchImages())
