@@ -142,6 +142,7 @@ form {
 
 @media (max-width:750px) {
     #search-input {
+        width: 45%;
         padding: 10px 20px;
         font-size: 18px;
         color: #000;
@@ -164,6 +165,7 @@ form {
     }
 
     #search-input {
+        width: 30%;
         padding: 10px 20px;
         font-size: 18px;
         color: #000;
