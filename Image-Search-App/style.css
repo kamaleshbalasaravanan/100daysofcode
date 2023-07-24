@@ -142,14 +142,14 @@ form {
 
 @media (max-width:750px) {
     #search-input {
-        width: 45%;
+        width: 50%;
         padding: 10px 20px;
         font-size: 18px;
         color: #000;
         border-radius: 8px;
         border: none;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-        max-width: 350px;
+        max-width: 380px;
     }
 }
 
@@ -165,7 +165,7 @@ form {
     }
 
     #search-input {
-        width: 35%;
+        width: 60%;
         padding: 10px 20px;
         font-size: 18px;
         color: #000;
@@ -173,7 +173,7 @@ form {
         border: none;
         border-bottom: 4px solid #138065;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-        max-width: 300px;
+        max-width: 400px;
     }
 
     .search-results {
@@ -182,8 +182,13 @@ form {
 }
 
 @media (max-width:452px) {
+    
     .container h1 {
         font-size: 30px;
+    }
+
+    #search-input {
+        padding: 8px 15px;
     }
 
     .search-results {
