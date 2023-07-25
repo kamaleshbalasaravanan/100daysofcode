@@ -7,17 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Search App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d513c8d533.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <header>
+        <a href="#home" class="logo"><i class="fa-solid fa-camera"></i>Image Search App</a>
+        <i class="fa-solid fa-bars" id="menu"></i>
+        <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- <li><a href="#products">Api</a></li> -->
+        </ul>
+    </header>
     <div class="container">
-        <h1>Image Search App</h1>
+        <h1 class="heading">Image Search App</h1>
         <form action="#">
             <input type="text" id="search-input" placeholder="Search for images">
             <button id="search-btn">Search</button>
         </form>
         <div class="search-results">
-            <div class="search-result">
+            <!-- <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
                     alt="Crowded Beach with People">
                 <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
@@ -43,25 +55,91 @@
                     alt="Crowded Beach with People">
                 <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
                     target="_blank">Crowded Beach with People</a>
-            </div>
-
-            <div class="search-result">
-                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
-                    alt="Crowded Beach with People">
-                <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
-                    target="_blank">Crowded Beach with People</a>
-            </div>
-
-            <div class="search-result">
-                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
-                    alt="Crowded Beach with People">
-                <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
-                    target="_blank">Crowded Beach with People</a>
-            </div>
+            </div> -->
+            
         </div>
-
         <button id="showmore-btn">Show More</button>
     </div>
+
+    <!-- <section id="categories" class="search-results"> -->
+
+
+        <!-- <div class="categories-container">
+            <div class="categories-box">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <h2>ANimals</h2>
+            </div>
+
+            <div class="categories-box">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <h2>Plants</h2>
+            </div>
+
+            <div class="categories-box">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <h2>Cars</h2>
+            </div>
+        </div> -->
+
+
+        <!-- <div class="search-result">
+            <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Crowded Beach with People">
+            <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                target="_blank">Crowded Beach with People</a>
+        </div>
+
+        <div class="search-result">
+            <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Crowded Beach with People">
+            <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                target="_blank">Crowded Beach with People</a>
+        </div>
+
+        <div class="search-result">
+            <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Crowded Beach with People">
+            <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                target="_blank">Crowded Beach with People</a>
+        </div>
+
+
+    </section> -->
+
+
+    <section id="categories" class="categories">
+        <h1 class="heading">Categories</h1>
+        <div class="categories-container">
+            <div class="categories-box">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Crowded Beach with People">
+                <h2>Animals</h2>
+            </div>
+            
+            <div class="categories-box">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Crowded Beach with People">
+                <h2>Animals</h2>
+            </div>
+
+            <div class="categories-box">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Crowded Beach with People">
+                <h2>Animals</h2>
+            </div>
+
+            <div class="categories-box">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                alt="Crowded Beach with People">
+                <h2>Animals</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about"></section>
     <script src="main.js"></script>
 </body>
 
