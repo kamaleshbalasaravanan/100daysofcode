@@ -431,7 +431,7 @@ form {
     }
 
     #search-input {
-        width: 66%;
+        width: 100%;
         border-bottom: 4px solid #138065;
         max-width: 400px;
     }
