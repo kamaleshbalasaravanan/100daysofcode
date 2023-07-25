@@ -47,7 +47,7 @@ header{
 }
 
 .logo{
-    font-size: 24px;
+    font-size: 32px;
     color: #138065;
     /* gap: 20px; */
 }
@@ -119,6 +119,11 @@ form {
     border-radius: 8px;
     border: none;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+input::placeholder{
+    /* font-size: 32px */
+    color: #bfbfbf;
 }
 
 #search-btn {
