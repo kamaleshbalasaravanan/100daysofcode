@@ -444,12 +444,23 @@ form {
 
 @media (max-width:452px) {
     
-    .container h1 {
+    .container h1,
+    .box h1,
+    .about-text h2 {
         font-size: 30px;
+    }
+
+    .box{
+        flex-direction: column;
+    }
+
+    .categories h1{
+        font-size: 28px;
     }
 
     .search-results,
     .categories-container {
         grid-template-columns: repeat(auto-fit, 100%)
     }
+
 }
