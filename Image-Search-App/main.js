@@ -10,6 +10,7 @@ const inputEl = document.querySelector("#search-input")
 const searchBtn = document.querySelector("#search-btn")
 const searchResults = document.querySelector(".search-results")
 const showMore = document.querySelector("#showmore-btn")
+const next = document.querySelector("#next-btn")
 // console.log(formEl,inputEl,searchResults,showMore)
 const categoriescontainer = document.querySelector(".categories-container")
 let inputData = ""
@@ -64,17 +65,31 @@ function searchImages() {
                 showMore.style.display = "block"
             }
         })
+
+        .catch(() =>{
+            if(inputData.length == 0){
+                alert("input field cannot be empty")
+                console.log('hi')
+            }
+            else{
+                alert("please enter the valid data")
+            }
+        })
 }
 function categories() {
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query="random"&client_id=${accesskey}`
+    let pageX = Math.floor(Math.random() * 10)
+    console.log(pageX)
+    const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
 
     fetch(url)
         .then((resp) => resp.json())
         .then((data) => {
             const results = data.results
-            if (page === 1) {
                 categoriescontainer.innerHTML = ""
-            }
+
+            // if (pageX === 1) {
+            //     categoriescontainer.innerHTML = ""
+            // }
             results.map((result) => {
                 // console.log(result.tags)
                 const tags = result.tags
@@ -107,6 +122,10 @@ formEl.addEventListener("submit", (e) => {
 
 showMore.addEventListener("click", () => {
     searchImages()
+})
+
+next.addEventListener("click", () =>{
+    categories()
 })
 
 window.addEventListener("load", categories())  
