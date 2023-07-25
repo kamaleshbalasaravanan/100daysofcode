@@ -77,7 +77,7 @@ function searchImages() {
         })
 }
 function categories() {
-    let pageX = Math.floor(Math.random() * 10)
+    let pageX = Math.floor(Math.random() * 100)
     console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
 
