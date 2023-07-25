@@ -26,6 +26,11 @@ footer{
     padding: 40px 5%;
 } */
 
+*::selection{
+    color: #fff;
+    background-color: #138065;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -348,6 +353,37 @@ form {
     color: #000;
     margin: 8px 0 16px;
     text-align: justify;
+}
+
+.contact{
+    margin: 50px auto 30px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social a{
+    font-size: 27px;
+    margin: 8px;
+}
+
+.social a i{
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.social a i:hover{
+    background-color: #138065;
+}
+
+.contact p{
+    font-size: 20px;
+    text-align: center;
+    color: #008148;
+    margin: 16px 0;
 }
 
 @media (max-width:1256px) {
