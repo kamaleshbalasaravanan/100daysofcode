@@ -18,12 +18,12 @@ let page = 1
 
 // searchBtn.addEventListener("click",searchImages)
 
-menu.addEventListener("click", ()=>{
+menu.addEventListener("click", () => {
     header.classList.toggle('close')
     navbar.classList.toggle('active')
 })
 
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll", () => {
     // menu.classList
     navbar.classList.remove('active')
 })
@@ -66,12 +66,12 @@ function searchImages() {
             }
         })
 
-        .catch(() =>{
-            if(inputData.length == 0){
+        .catch(() => {
+            if (inputData.length == 0) {
                 alert("input field cannot be empty")
                 console.log('hi')
             }
-            else{
+            else {
                 alert("please enter the valid data")
             }
         })
@@ -85,7 +85,7 @@ function categories() {
         .then((resp) => resp.json())
         .then((data) => {
             const results = data.results
-                categoriescontainer.innerHTML = ""
+            categoriescontainer.innerHTML = ""
 
             // if (pageX === 1) {
             //     categoriescontainer.innerHTML = ""
@@ -100,13 +100,16 @@ function categories() {
                 image.alt = result.alt_description
                 wrapper.appendChild(image)
 
-                tags.map((tag) => {
-                    // console.log(tag.title)
-                    const title = document.createElement('h2')
-                    title.innerHTML = tag.title
-                    // console.log(data[0].tag[Object.keys(data[0].tag)].title)
-
-                    wrapper.appendChild(title)
+                tags.map((value, index) => {
+                    // console.log(index,value)
+                    // value == 0 ? console.log(index) :"i"
+                    if (index == 0) {
+                        let tag = value
+                        // console.log(tag.title)
+                        const title = document.createElement('h2')
+                        title.innerHTML = tag.title
+                        wrapper.appendChild(title)
+                    }
                 })
                 categoriescontainer.appendChild(wrapper)
 
@@ -124,7 +127,7 @@ showMore.addEventListener("click", () => {
     searchImages()
 })
 
-next.addEventListener("click", () =>{
+next.addEventListener("click", () => {
     categories()
 })
 

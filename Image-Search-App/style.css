@@ -31,6 +31,17 @@ footer{
     background-color: #138065;
 }
 
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: #138065;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 8px;
+    background-color: #0abb8f ;
+    border-radius: 10px;
+}
+
 header{
     position: fixed;
     top: 0;
