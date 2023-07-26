@@ -67,7 +67,7 @@ function searchImages() {
         })
 
         .catch(() => {
-            if (inputData.length == 0) {
+            if (inputData.length == 2) {
                 alert("input field cannot be empty")
                 console.log('hi')
             }
