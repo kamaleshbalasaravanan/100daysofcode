@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            padding: 20px;
+        }
+        label{
+            font-size: 32px;
+        }
+        input{
+            width: 200px;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        button{
+            margin-left: 40%;
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <div>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname">
+        </div>
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname">
+        </div>
+        <div>
+            <button type="submit">Next Page</button>
+        </div>
+    </form>
+
+    <script>
+        const form = document.querySelector('#form')
+        const firstname = document.querySelector('#firstname')
+        const lastname = document.querySelector('#lastname')
+
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            // console.log('hi')
+
+            const firstnamevalue = firstname.value
+            const lastnamevalue = lastname.value
+            // console.log(firstnamevalue, lastnamevalue)
+
+            localStorage.setItem("Firstname",firstnamevalue)
+            localStorage.setItem("Lastname",lastnamevalue)
+        })
+    </script>
+</body>
+</html>
