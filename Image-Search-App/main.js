@@ -5,7 +5,7 @@ const header = document.querySelector('header')
 const navbar = document.querySelector(".navbar")
 const icons = document.querySelectorAll('.carousel i')
 
-
+const slide = document.querySelector(".slide")
 
 const formEl = document.querySelector("form")
 const inputEl = document.querySelector("#search-input")
@@ -30,27 +30,60 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove('active')
 })
 
-icons.forEach((icon) =>{
-    icon.addEventListener("click",()=>{
-        const offset = icon.id == "right" ? 1 :-1
-        const slides = icon.closest(".carousel").querySelector("ul")
-        // console.log(slides)
-        const activeslide = slides.querySelector("[data-active]")
-        // console.log(activeslide)
-        let newIndex = [...slides.children].indexOf(activeslide) + offset
+// icons.forEach((icon) =>{
+//     icon.addEventListener("click",()=>{
+//         const offset = icon.id == "right" ? 1 :-1
+//         const slides = icon.closest(".carousel").querySelector("ul")
+//         // console.log(slides)
+//         const activeslide = slides.querySelector("[data-active]")
+//         // console.log(activeslide)
+//         let newIndex = [...slides.children].indexOf(activeslide) + offset
         
-        if(newIndex < 0){
-            newIndex = slides.children.length - 1
-        }
+//         if(newIndex < 0){
+//             newIndex = slides.children.length - 1
+//         }
 
-        if(newIndex >= slides.children.length){
-            newIndex = 0
-        }
+//         if(newIndex >= slides.children.length){
+//             newIndex = 0
+//         }
 
-        slides.children[newIndex].dataset.active = true
-        delete activeslide.dataset.active
+//         slides.children[newIndex].dataset.active = true
+//         delete activeslide.dataset.active
+//     })
+// })
+
+icons.forEach((icon) => {
+    icon.addEventListener("click" ,() =>{
+        slide.innerHTML = ""
+        carouselImg()
     })
 })
+
+function carouselImg(){
+    // console.log('carousel')
+    let pageX = Math.floor(Math.random() * 100)
+    // let topic = "wallpapers"
+    const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
+
+    fetch(url)
+    .then((resp) => resp.json())
+    .then((data) => {
+        // console.log(data)
+        const results = data.results
+        results.map((value, index) => {
+            // console.log(result)
+            if(index == 0){
+                let result = value
+                // console.log(result)
+                const image= document.createElement('img')
+                image.src = result.urls.small
+                // console.log(image)
+                slide.appendChild(image)
+            }
+        })
+        
+    })
+}
 
 function searchImages() {
     inputData = inputEl.value
@@ -102,7 +135,7 @@ function searchImages() {
 }
 function categories() {
     let pageX = Math.floor(Math.random() * 100)
-    console.log(pageX)
+    // console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
 
     fetch(url)
@@ -156,3 +189,4 @@ next.addEventListener("click", () => {
 })
 
 window.addEventListener("load", categories())  
+window.addEventListener("load", carouselImg())
