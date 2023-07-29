@@ -3,6 +3,8 @@ const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
 const menu = document.querySelector("#menu")
 const header = document.querySelector('header')
 const navbar = document.querySelector(".navbar")
+const icons = document.querySelectorAll('.carousel i')
+
 
 
 const formEl = document.querySelector("form")
@@ -26,6 +28,28 @@ menu.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
     // menu.classList
     navbar.classList.remove('active')
+})
+
+icons.forEach((icon) =>{
+    icon.addEventListener("click",()=>{
+        const offset = icon.id == "right" ? 1 :-1
+        const slides = icon.closest(".carousel").querySelector("ul")
+        // console.log(slides)
+        const activeslide = slides.querySelector("[data-active]")
+        // console.log(activeslide)
+        let newIndex = [...slides.children].indexOf(activeslide) + offset
+        
+        if(newIndex < 0){
+            newIndex = slides.children.length - 1
+        }
+
+        if(newIndex >= slides.children.length){
+            newIndex = 0
+        }
+
+        slides.children[newIndex].dataset.active = true
+        delete activeslide.dataset.active
+    })
 })
 
 function searchImages() {

@@ -23,11 +23,32 @@
         </ul>
     </header>
     <section class="container" id="home">
-        <h1 class="heading">Image Search App</h1>
+        <div aria-label="Newest Photos">
+            <div class="carousel" data-carousel>
+                <i class="fa-solid fa-angle-left left" id="left"></i>
+                <i class="fa-solid fa-angle-right right" id="right"></i>
+                <ul class="data-slides">
+                    <li class="slide" data-active>
+                        <img src="https://images.unsplash.com/photo-1520719779766-3085136d7180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="visuals">
+                    </li>
+
+                    <li class="slide" >
+                        <img src="https://images.unsplash.com/photo-1530345586132-0fbc15e9ae5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="visuals">
+                    </li>
+
+                    <li class="slide" >
+                        <img src="https://images.unsplash.com/photo-1595981234058-a9302fb97229?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="visuals">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="info">
+            <h1 class="heading">Image Search App</h1>
         <form action="#">
             <input type="text" id="search-input" placeholder="Search for images">
             <button id="search-btn">Search</button>
         </form>
+        </div>
         <div class="search-results">
             <!-- <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
@@ -97,11 +118,14 @@
     </section>
 
     <section id="about" class="about">
-           <img src="https://images.unsplash.com/photo-1521159311222-fcd72db9bd8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="about">
+        <img src="https://images.unsplash.com/photo-1521159311222-fcd72db9bd8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="about">
         <div class="about-text">
             <h2>About Image Search App</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa unde repellendus dignissimos eius tempora quia! Deleniti cupiditate debitis ipsam beatae?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa unde repellendus dignissimos eius tempora quia! Deleniti cupiditate debitis ipsam beatae?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa unde repellendus dignissimos eius tempora
+                quia! Deleniti cupiditate debitis ipsam beatae?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa unde repellendus dignissimos eius tempora
+                quia! Deleniti cupiditate debitis ipsam beatae?</p>
         </div>
     </section>
 
