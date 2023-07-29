@@ -10,6 +10,7 @@ const slide = document.querySelector(".slide")
 const formEl = document.querySelector("form")
 const inputEl = document.querySelector("#search-input")
 const searchBtn = document.querySelector("#search-btn")
+const title = document.querySelector('#title')
 const searchResults = document.querySelector(".search-results")
 const showMore = document.querySelector("#showmore-btn")
 const next = document.querySelector("#next-btn")
@@ -98,6 +99,12 @@ function searchImages() {
             if (page === 1) {
                 searchResults.innerHTML = ""
             }
+            
+            title.innerHTML = ""
+            const searchTitle =  document.createElement('h1')
+            searchTitle.classList.add('heading')
+            searchTitle.textContent = inputData
+            title.appendChild(searchTitle)
 
             results.map((result) => {
                 //  console.log("1")
