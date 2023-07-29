@@ -13,6 +13,9 @@
 <body>
     <div class="displayCategories">
         <h1 class="heading">Categories</h1>
+        <div id="title">
+
+        </div>
         <div class="search-results" id="categories-result">
             <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
@@ -72,6 +75,12 @@
             if (page === 1) {
                 categoriesResult.innerHTML = ""
             }
+
+            title.innerHTML = ""
+            const searchTitle =  document.createElement('h1')
+            searchTitle.classList.add('heading')
+            searchTitle.textContent = inputData
+            title.appendChild(searchTitle)
 
             results.map((result) => {
                 //  console.log("1")
