@@ -496,7 +496,8 @@ input::placeholder{
 
 @media (max-width:1256px) {
     .container,
-    .categories {
+    .categories ,
+    .displayCategories{
         padding: 25px;
     }
 
