@@ -109,6 +109,7 @@ header{
     height: 100vh;
     position: relative;
     margin-bottom: 100px;
+
 }
 .slide{
     position: absolute;
@@ -140,12 +141,12 @@ header{
     position: absolute;
     z-index: 2;
     font-size: 42px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     background: none;
     border: none;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, .1) ;
+    background-color: rgba(0, 0, 0, .3) ;
     padding: 15px;
     border-radius: 10px;
 }
@@ -169,7 +170,8 @@ header{
 }
 
 .info{
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+    /* background-color: #fff; */
     background: transparent;
     width: 100%;
     position: absolute;
@@ -202,7 +204,7 @@ form {
 }
 
 #search-input {
-    width: 100%;
+    width: 70%;
     max-width: 700px;
     padding: 15px 20px;
     font-size: 18px;
@@ -545,6 +547,9 @@ input::placeholder{
         top: 45%;
     }
 
+    .info h1{
+        font-size: 40px;
+    }
     .carousel{
         height: 90vh;
     }
