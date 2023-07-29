@@ -127,6 +127,7 @@ header{
     width: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 10px;
 }
 
 .slide[data-active]{
@@ -143,6 +144,7 @@ header{
     position: absolute;
     z-index: 2;
     font-size: 42px;
+    font-weight: bolder;
     top: 60%;
     transform: translateY(-50%);
     background: none;
@@ -168,7 +170,7 @@ header{
 }
 
 .carousel i:focus{
-    outline: 1px solid black;
+    outline: 4px solid black;
 }
 
 .info{
@@ -621,6 +623,12 @@ input::placeholder{
     .box{
         flex-direction: column;
     }
+
+    .heading{
+        font-size: 28px;
+        margin: 10px 0 45px;
+    }
+
 
     .categories h1{
         font-size: 28px;

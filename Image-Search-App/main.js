@@ -96,6 +96,8 @@ function searchImages() {
     inputData = inputEl.value
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accesskey}`
 
+
+    if(inputData.length !== 0 ){
     fetch(url)
         .then((resp) => resp.json())
         .then((data) => {
@@ -131,20 +133,26 @@ function searchImages() {
             })
 
             page++
-            if (page > 1) {
+            if (page > 1 || inputData.length === 0 ) {
                 showMore.style.display = "block"
             }
         })
 
         .catch(() => {
-            if (inputData.length == 2) {
+            if (inputData.length == 0) {
                 alert("input field cannot be empty")
-                console.log('hi')
+                // console.log('hi')
             }
             else {
                 alert("please enter the valid data")
             }
         })
+
+
+    }
+    else{
+        alert("error")
+    }
 }
 function categories() {
     let pageX = Math.floor(Math.random() * 100)
