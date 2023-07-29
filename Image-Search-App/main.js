@@ -19,6 +19,7 @@ const categoriescontainer = document.querySelector(".categories-container")
 let inputData = ""
 let page = 1
 
+
 // searchBtn.addEventListener("click",searchImages)
 
 menu.addEventListener("click", () => {
@@ -199,6 +200,7 @@ function categories() {
 formEl.addEventListener("submit", (e) => {
     e.preventDefault()
     page = 1
+    // window.location.href = "search.html"
     searchImages()
 })
 
