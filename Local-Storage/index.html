@@ -12,6 +12,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            gap: 20px;
         }
         div{
             padding: 20px;
@@ -20,9 +22,10 @@
             font-size: 32px;
         }
         input{
-            width: 200px;
+            width: 250px;
             padding: 10px;
             margin-left: 20px;
+            font-size: 24px;
         }
         button{
             margin-left: 40%;
@@ -32,36 +35,27 @@
     </style>
 </head>
 <body>
-    <form action="" id="form">
-        <div>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname">
-        </div>
-        <div>
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname">
-        </div>
-        <div>
-            <button type="submit">Next Page</button>
-        </div>
+    <form id="form">
+       <input type="text" placeholder="please enter ...">
     </form>
+    <h2 id="output"></h2>
 
     <script>
-        const form = document.querySelector('#form')
-        const firstname = document.querySelector('#firstname')
-        const lastname = document.querySelector('#lastname')
+        const input = document.querySelector("input")
+        const h2 = document.querySelector("h2")
 
-        form.addEventListener("submit", (e)=>{
-            e.preventDefault()
-            // console.log('hi')
+        input.addEventListener("keyup", display)
+        h2.innerHTML = localStorage.getItem('value')
 
-            const firstnamevalue = firstname.value
-            const lastnamevalue = lastname.value
-            // console.log(firstnamevalue, lastnamevalue)
+        function display(){
+            localStorage.setItem('value',input.value)
+            // console.log(localStorage.getItem('value'))
+            h2.innerHTML = localStorage.getItem('value')
+        }
 
-            localStorage.setItem("Firstname",firstnamevalue)
-            localStorage.setItem("Lastname",lastnamevalue)
-        })
+        setTimeout(() =>{
+            localStorage.clear()
+        },10000)
     </script>
 </body>
 </html>
