@@ -467,6 +467,33 @@ input::placeholder{
     margin: 16px 0;
 }
 
+
+/* categories.html */
+
+.displayCategories{
+    line-height: 1.6;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+#more-categories{
+    background-color: #008cba;
+    padding: 10px 20px;
+    margin: 30px auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    /* display: none; */
+}
+
 @media (max-width:1256px) {
     .container,
     .categories {

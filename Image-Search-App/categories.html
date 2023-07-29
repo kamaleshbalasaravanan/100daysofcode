@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search App</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/d513c8d533.js" crossorigin="anonymous"></script>
+
+<body>
+    <div class="displayCategories">
+        <h1 class="heading">Categories</h1>
+        <div class="search-results" id="categories-result">
+            <div class="search-result">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                    target="_blank">Crowded Beach with People</a>
+            </div>
+
+            <div class="search-result">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                    target="_blank">Crowded Beach with People</a>
+            </div>
+            <div class="search-result">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                    target="_blank">Crowded Beach with People</a>
+            </div>
+
+            <div class="search-result">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                    target="_blank">Crowded Beach with People</a>
+            </div>
+
+            <div class="search-result">
+                <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                    alt="Crowded Beach with People">
+                <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
+                    target="_blank">Crowded Beach with People</a>
+            </div>
+        </div>
+        <button id="more-categories">Show More</button>
+    </div>
+</body>
+<script>
+    const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+
+    const categories = document.querySelector(".displayCategories")
+    const categoriesResult = document.querySelector("#categories-result")
+    const showmore = document.querySelector("#more-categories")
+    let inputData = ""
+    let page = 1
+
+    function showCategories(){
+        inputData = "dog"
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accesskey}`
+
+        fetch(url)
+        .then((resp) => resp.json())
+        .then((data) => {
+            // console.log(data)
+            const results = data.results
+            if (page === 1) {
+                categoriesResult.innerHTML = ""
+            }
+
+            results.map((result) => {
+                //  console.log("1")
+                //  console.log(result)
+                const imageWrapper = document.createElement('div')
+                imageWrapper.classList.add("search-result")
+                const image = document.createElement('img')
+                image.src = result.urls.small
+                image.alt = result.alt_description
+                const imageLink = document.createElement('a')
+                imageLink.href = result.links.html
+                imageLink.target = "_blank"
+                imageLink.textContent = result.alt_description
+
+                imageWrapper.appendChild(image)
+                imageWrapper.appendChild(imageLink)
+                categoriesResult.appendChild(imageWrapper)
+            })
+
+            page++
+            if (page > 1) {
+                showmore.style.display = "block"
+            }
+        })
+
+    }
+
+    window.addEventListener("load", showCategories())
+    showmore.addEventListener("click", () => {
+    showCategories()
+})
+
+</script>
+
+</html>

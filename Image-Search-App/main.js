@@ -60,6 +60,12 @@ icons.forEach((icon) => {
     })
 })
 
+
+categoriescontainer.addEventListener("click", () => {
+    window.location.href = "categories.html"
+    // document.querySelector('')
+})
+
 function carouselImg(){
     // console.log('carousel')
     let pageX = Math.floor(Math.random() * 100)
@@ -172,6 +178,7 @@ function categories() {
                         // console.log(tag.title)
                         const title = document.createElement('h2')
                         title.innerHTML = tag.title
+                        localStorage.setItem('title', tag.title)
                         wrapper.appendChild(title)
                     }
                 })
@@ -194,6 +201,7 @@ showMore.addEventListener("click", () => {
 next.addEventListener("click", () => {
     categories()
 })
+
 
 window.addEventListener("load", categories())  
 window.addEventListener("load", carouselImg())
