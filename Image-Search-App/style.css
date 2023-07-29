@@ -501,14 +501,16 @@ input::placeholder{
     }
 
     .search-results ,
-    .categories-container{
+    .categories-container,
+    .categoriesResult{
         grid-template-columns: repeat(auto-fit, minmax(300px, auto))
     }
 }
 
 @media (max-width:1005px) {
     .search-results ,
-    .categories-container{
+    .categories-container,
+    .categoriesResult{
         grid-template-columns: repeat(auto-fit, minmax(250px, auto))
     }
 }
@@ -601,7 +603,8 @@ input::placeholder{
     }
 
     .search-results ,
-    .categories-container{
+    .categories-container,
+    .categoriesResult{
         grid-template-columns: repeat(auto-fit, minmax(200px, auto))
     }
 }
@@ -623,7 +626,8 @@ input::placeholder{
     }
 
     .search-results,
-    .categories-container {
+    .categories-container,
+    .categoriesResult {
         grid-template-columns: repeat(auto-fit, 100%)
     }
 
