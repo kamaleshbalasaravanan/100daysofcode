@@ -17,3 +17,13 @@ body{
     background-color: #87ceeb;
     /* background-color: #87CEFA; */
 }
+
+.container{
+    padding: 15px 20px;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+}
