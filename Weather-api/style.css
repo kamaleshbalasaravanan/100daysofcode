@@ -234,3 +234,9 @@ header i {
     font-size: 17px;
     margin-top: -2px;
 }
+
+@media(max-width:520px){
+    .container{
+        width: 380px;
+    }
+}
