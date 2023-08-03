@@ -168,7 +168,7 @@ header i {
     font-weight: 500;
 }
 
-.weather-part .numb {
+.weather-part .numb,.numb-2 {
     font-weight: 600;
 }
 
