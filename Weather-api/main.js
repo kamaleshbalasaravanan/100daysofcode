@@ -3,7 +3,8 @@ const inputPart = document.querySelector(".input-part")
 const infoTxt = document.querySelector(".info-txt")
 const inputField = document.querySelector("input")
 const locationBtn = document.querySelector("button")
-const weatherIcon = document.querySelector(".weather-part img")
+const weatherIcon = container.querySelector(".weather-part img")
+const arrowBtn = container.querySelector("#left")
 console.log(weatherIcon)
 let apikey = "18442d8235523485b0bddc1be2e737d3"
 let api
@@ -15,64 +16,80 @@ inputField.addEventListener("keyup", (e) => {
     }
 })
 
-locationBtn.addEventListener("click",()=>{
-    if(navigator.geolocation){
+locationBtn.addEventListener("click", () => {
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(onSuccess, onError)
     }
-    else{
+    else {
         alert("Your browser not support geolocation api")
     }
 })
 
-function onSuccess(position){
+function onSuccess(position) {
     console.log(position)
     // console.log(position.coords)
-    const {longitude, latitude} = position.coords
+    const { longitude, latitude } = position.coords
     api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apikey}`
     fetchData()
     // console.log(latitude, longitude)
 }
 
-function onError(error){
+function onError(error) {
     console.log(error)
     infoTxt.innerHTML = error.message
     infoTxt.classList.add("error")
 }
 
-function requestApi(city){
+function requestApi(city) {
     // console.log(city)
     api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`
     fetchData()
 
 }
 
-function fetchData(){
+function fetchData() {
     infoTxt.innerHTML = "Getting Weather Details"
     infoTxt.classList.add("pending")
     fetch(api)
-    .then((resp) => resp.json())
-    .then((data) => weatherDetails(data))
+        .then((resp) => resp.json())
+        .then((data) => weatherDetails(data))
 }
 
-function weatherDetails(info){
+function weatherDetails(info) {
     console.log(info)
     // console.log(info.main)
     // const {feels_like, pressure} = info.main
     // console.log(feels_like, pressure)
 
-    if(info.cod == "404"){
+    if (info.cod == "404") {
         infoTxt.innerHTML = `${inputField.value} isn't a valid city `
         infoTxt.classList.replace("pending", "error")
     }
-    else{
+    else {
 
         const city = info.name
         const country = info.sys.country
-        const {description, id} = info.weather[0]
-        const {feels_like, humidity, temp} = info.main
+        const { description, id } = info.weather[0]
+        const { feels_like, humidity, temp } = info.main
 
-        if(id == 800){
-           document.querySelectorAll(".weather-part img").Sr
+        if (id == 800) {
+            //    document.querySelectorAll(".weather-part img").
+            weatherIcon.src = "icons/clear.svg"
+        }
+        else if (id >= 200 && id <= 232) {
+            weatherIcon.src = "icons/strom.svg"
+        }
+        else if (id >= 600 && id <= 622) {
+            weatherIcon.src = "icons/snow.svg"
+        }
+        else if (id >= 701 && id <= 781) {
+            weatherIcon.src = "icons/haze.svg"
+        }
+        else if (id >= 801 && id <= 804) {
+            weatherIcon.src = "icons/cloud.svg"
+        }
+        else if (id >= 300 && id <= 321) {
+            weatherIcon.src = "icons/rain.svg"
         }
 
         container.querySelector(".temp .numb").innerHTML = Math.floor(temp)
@@ -84,9 +101,13 @@ function weatherDetails(info){
 
 
 
-        console.log(city,country,description,id,feels_like,humidity,temp)
+        console.log(city, country, description, id, feels_like, humidity, temp)
         infoTxt.classList.remove("pending", "error")
         container.classList.add("active")
     }
 
 }
+
+arrowBtn.addEventListener("click",()=>{
+    container.classList.remove("active")
+})
