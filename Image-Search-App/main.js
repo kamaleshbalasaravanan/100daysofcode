@@ -16,8 +16,13 @@ const showMore = document.querySelector("#showmore-btn")
 const next = document.querySelector("#next-btn")
 // console.log(formEl,inputEl,searchResults,showMore)
 const categoriescontainer = document.querySelector(".categories-container")
+
+const titleName = []
+console.log(categoriescontainer)
 let inputData = ""
 let page = 1
+let i=0
+let titlesarray = ["", "", "", "", "", "", "", "", "", ""]
 
 
 // searchBtn.addEventListener("click",searchImages)
@@ -40,7 +45,7 @@ window.addEventListener("scroll", () => {
 //         const activeslide = slides.querySelector("[data-active]")
 //         // console.log(activeslide)
 //         let newIndex = [...slides.children].indexOf(activeslide) + offset
-        
+
 //         if(newIndex < 0){
 //             newIndex = slides.children.length - 1
 //         }
@@ -55,42 +60,43 @@ window.addEventListener("scroll", () => {
 // })
 
 icons.forEach((icon) => {
-    icon.addEventListener("click" ,() =>{
+    icon.addEventListener("click", () => {
         slide.innerHTML = ""
         carouselImg()
     })
 })
 
 
-categoriescontainer.addEventListener("click", () => {
-    window.location.href = "categories.html"
-    // document.querySelector('')
-})
+// categoriescontainer.addEventListener("click", () => {
+//     window.location.href = "categories.html"
+//     // document.querySelector('')
+// })
 
-function carouselImg(){
+
+function carouselImg() {
     // console.log('carousel')
     let pageX = Math.floor(Math.random() * 100)
     // let topic = "wallpapers"
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
 
     fetch(url)
-    .then((resp) => resp.json())
-    .then((data) => {
-        // console.log(data)
-        const results = data.results
-        results.map((value, index) => {
-            // console.log(result)
-            if(index == 0){
-                let result = value
+        .then((resp) => resp.json())
+        .then((data) => {
+            // console.log(data)
+            const results = data.results
+            results.map((value, index) => {
                 // console.log(result)
-                const image= document.createElement('img')
-                image.src = result.urls.small
-                // console.log(image)
-                slide.appendChild(image)
-            }
+                if (index == 0) {
+                    let result = value
+                    // console.log(result)
+                    const image = document.createElement('img')
+                    image.src = result.urls.small
+                    // console.log(image)
+                    slide.appendChild(image)
+                }
+            })
+
         })
-        
-    })
 }
 
 function searchImages() {
@@ -98,60 +104,60 @@ function searchImages() {
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accesskey}`
 
 
-    if(inputData.length !== 0 ){
-    fetch(url)
-        .then((resp) => resp.json())
-        .then((data) => {
-            // console.log(data)
-            // console.log(data.results)
-            const results = data.results
-            if (page === 1) {
-                searchResults.innerHTML = ""
-            }
-            
-            title.innerHTML = ""
-            const searchTitle =  document.createElement('h1')
-            searchTitle.classList.add('heading')
-            searchTitle.textContent = inputData
-            title.appendChild(searchTitle)
+    if (inputData.length !== 0) {
+        fetch(url)
+            .then((resp) => resp.json())
+            .then((data) => {
+                // console.log(data)
+                // console.log(data.results)
+                const results = data.results
+                if (page === 1) {
+                    searchResults.innerHTML = ""
+                }
 
-            results.map((result) => {
-                //  console.log("1")
-                //  console.log(result)
-                const imageWrapper = document.createElement('div')
-                imageWrapper.classList.add("search-result")
-                const image = document.createElement('img')
-                image.src = result.urls.small
-                image.alt = result.alt_description
-                const imageLink = document.createElement('a')
-                imageLink.href = result.links.html
-                imageLink.target = "_blank"
-                imageLink.textContent = result.alt_description
+                title.innerHTML = ""
+                const searchTitle = document.createElement('h1')
+                searchTitle.classList.add('heading')
+                searchTitle.textContent = inputData
+                title.appendChild(searchTitle)
 
-                imageWrapper.appendChild(image)
-                imageWrapper.appendChild(imageLink)
-                searchResults.appendChild(imageWrapper)
+                results.map((result) => {
+                    //  console.log("1")
+                    //  console.log(result)
+                    const imageWrapper = document.createElement('div')
+                    imageWrapper.classList.add("search-result")
+                    const image = document.createElement('img')
+                    image.src = result.urls.small
+                    image.alt = result.alt_description
+                    const imageLink = document.createElement('a')
+                    imageLink.href = result.links.html
+                    imageLink.target = "_blank"
+                    imageLink.textContent = result.alt_description
+
+                    imageWrapper.appendChild(image)
+                    imageWrapper.appendChild(imageLink)
+                    searchResults.appendChild(imageWrapper)
+                })
+
+                page++
+                if (page > 1 || inputData.length === 0) {
+                    showMore.style.display = "block"
+                }
             })
 
-            page++
-            if (page > 1 || inputData.length === 0 ) {
-                showMore.style.display = "block"
-            }
-        })
-
-        .catch(() => {
-            if (inputData.length == 0) {
-                alert("input field cannot be empty")
-                // console.log('hi')
-            }
-            else {
-                alert("please enter the valid data")
-            }
-        })
+            .catch(() => {
+                if (inputData.length == 0) {
+                    alert("input field cannot be empty")
+                    // console.log('hi')
+                }
+                else {
+                    alert("please enter the valid data")
+                }
+            })
 
 
     }
-    else{
+    else {
         alert("error")
     }
 }
@@ -173,6 +179,12 @@ function categories() {
                 // console.log(result.tags)
                 const tags = result.tags
                 const wrapper = document.createElement('div')
+                wrapper.addEventListener("click", (e) => {
+                    // console.log(e)
+                    // console.log('hi')
+                    window.location.href = "categories.html"
+                    // console.log(titleName)
+                })
                 wrapper.classList.add("categories-box")
                 const image = document.createElement('img')
                 image.src = result.urls.small
@@ -184,18 +196,31 @@ function categories() {
                     // value == 0 ? console.log(index) :"i"
                     if (index == 0) {
                         let tag = value
-                        // console.log(tag.title)
+                        console.log(tag.title)
                         const title = document.createElement('h2')
                         title.innerHTML = tag.title
-                        localStorage.setItem('title', tag.title)
+                        console.log(i)
+                        titleName[i] = tag.title
+                        console.log(titleName)
+                        // console.log(titleName)
+                        // localStorage.setItem('title', tag.title)
                         wrapper.appendChild(title)
+                        i++
                     }
                 })
                 categoriescontainer.appendChild(wrapper)
-
+                // console.log(categoriescontainer)     
             })
         })
 }
+
+// console.log(titleName)
+
+// categoriescontainer.forEach((box) => {
+//     box.addEventListener("click",()=>{
+//         console.log(box)
+//     })
+// })
 
 formEl.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -213,5 +238,6 @@ next.addEventListener("click", () => {
 })
 
 
-window.addEventListener("load", categories())  
+categories()
+// window.addEventListener("load", categories())  
 window.addEventListener("load", carouselImg())
