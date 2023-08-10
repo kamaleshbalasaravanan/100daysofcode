@@ -423,19 +423,21 @@ input::placeholder{
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .about-text h2{
     text-align: center;
-    font-size: 32px;
+    font-size: 34px;
     text-transform: capitalize;
     letter-spacing: 1px;
     color: #138065;
     font-weight: 700;
+    margin-bottom: 16px;
 }
 
 .about-text p{
-    font-size: 22px;
+    font-size: 24px;
     color: #000;
     margin: 8px 0 16px;
     text-align: justify;
@@ -481,7 +483,7 @@ input::placeholder{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #more-categories{
