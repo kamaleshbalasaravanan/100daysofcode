@@ -17,45 +17,46 @@
 
         </div>
         <div class="search-results" id="categories-result">
-            <div class="search-result">
+            <!-- <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
                     alt="Crowded Beach with People">
                 <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
                     target="_blank">Crowded Beach with People</a>
-            </div>
+            </div> -->
 
-            <div class="search-result">
+            <!-- <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
                     alt="Crowded Beach with People">
                 <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
                     target="_blank">Crowded Beach with People</a>
-            </div>
-            <div class="search-result">
+            </div> -->
+            <!-- <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
                     alt="Crowded Beach with People">
                 <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
                     target="_blank">Crowded Beach with People</a>
-            </div>
+            </div> -->
 
-            <div class="search-result">
+            <!-- <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
                     alt="Crowded Beach with People">
                 <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
                     target="_blank">Crowded Beach with People</a>
-            </div>
+            </div> -->
 
-            <div class="search-result">
+            <!-- <div class="search-result">
                 <img src="https://images.unsplash.com/photo-1689956533687-48a209951899?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
                     alt="Crowded Beach with People">
                 <a href="https://unsplash.com/photos/a-crowded-beach-with-people-on-the-sand-and-in-the-water-wapRy5zZWX0"
                     target="_blank">Crowded Beach with People</a>
-            </div>
+            </div> -->
         </div>
         <button id="more-categories">Show More</button>
     </div>
 </body>
 <script>
-    const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+    // const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+    const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
 
     const categories = document.querySelector(".displayCategories")
     const categoriesResult = document.querySelector("#categories-result")
@@ -63,8 +64,10 @@
     let inputData = ""
     let page = 1
 
+    let titleName = localStorage.getItem('title')
+    console.log(titleName)
     function showCategories(){
-        inputData = "dog"
+        inputData = titleName
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accesskey}`
 
         fetch(url)

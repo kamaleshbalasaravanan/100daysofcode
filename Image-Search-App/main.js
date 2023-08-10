@@ -1,4 +1,5 @@
-const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+// const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
 
 const menu = document.querySelector("#menu")
 const header = document.querySelector('header')
@@ -18,10 +19,10 @@ const next = document.querySelector("#next-btn")
 const categoriescontainer = document.querySelector(".categories-container")
 
 const titleName = []
-console.log(categoriescontainer)
+// console.log(categoriescontainer)
 let inputData = ""
 let page = 1
-let i=0
+let i = 0
 let titlesarray = ["", "", "", "", "", "", "", "", "", ""]
 
 
@@ -163,6 +164,7 @@ function searchImages() {
 }
 function categories() {
     let pageX = Math.floor(Math.random() * 100)
+    let a = 0;
     // console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
 
@@ -179,17 +181,23 @@ function categories() {
                 // console.log(result.tags)
                 const tags = result.tags
                 const wrapper = document.createElement('div')
+                wrapper.dataset.Index = a
+                console.log(wrapper)   
                 wrapper.addEventListener("click", (e) => {
-                    // console.log(e)
-                    // console.log('hi')
+                    let indexValue = wrapper.dataset.Index
+                    let selectTitle = titleName[indexValue]
+                    console.log(selectTitle)
+                    localStorage.setItem('title', selectTitle)
+                    // storeValue()
                     window.location.href = "categories.html"
-                    // console.log(titleName)
+                    console.log(titleName)
                 })
                 wrapper.classList.add("categories-box")
                 const image = document.createElement('img')
                 image.src = result.urls.small
                 image.alt = result.alt_description
                 wrapper.appendChild(image)
+                a++
 
                 tags.map((value, index) => {
                     // console.log(index,value)
@@ -199,9 +207,9 @@ function categories() {
                         console.log(tag.title)
                         const title = document.createElement('h2')
                         title.innerHTML = tag.title
-                        console.log(i)
+                        // console.log(i)
                         titleName[i] = tag.title
-                        console.log(titleName)
+                        // console.log(titleName)
                         // console.log(titleName)
                         // localStorage.setItem('title', tag.title)
                         wrapper.appendChild(title)
@@ -211,11 +219,18 @@ function categories() {
                 categoriescontainer.appendChild(wrapper)
                 // console.log(categoriescontainer)     
             })
+            // console.log(titleName)  
         })
 }
 
-// console.log(titleName)
+function storeValue(){
+    console.log(titleName)
+}
 
+// for (let i = 0; i < 10; i++) {
+//     console.log(titleName[i])
+
+// }
 // categoriescontainer.forEach((box) => {
 //     box.addEventListener("click",()=>{
 //         console.log(box)
