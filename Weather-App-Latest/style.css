@@ -139,6 +139,8 @@ body {
 }
 
 .details {
+    padding: 10px;
+    /* border: 1px solid; */
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 200px);
@@ -242,6 +244,7 @@ button {
     cursor: pointer;
     font-weight: 600;
 }
+
 
 .displayweather {
     display: flex;
@@ -418,6 +421,8 @@ button {
 
     .details {
         grid-template-columns: repeat(2, 100px);
+    /* margin: 20px 25px 30px; */
+
     }
 
     .location,
@@ -480,5 +485,196 @@ button {
 
     .climate h2{
         font-size: 20px;
+    }
+}
+
+@media(max-width:1090px){
+    .firstContainer{
+        width: 250px;
+    }
+
+    .secondContainer{
+        width: 700px;
+    }
+}
+
+@media(max-width:990px) {
+    .firstContainer {
+        width: 250px;
+    }
+
+    .weatherpart img {
+        max-width: 110px;
+        margin-top: 18px;
+    }
+
+    .details {
+        grid-template-columns: repeat(2, 100px);
+    margin: 10px 15px 15px;
+
+    }
+
+    .weather .temp .deg {
+        margin: 2px 6px 0 0;
+    }
+    .location,    
+    .day {
+        font-size: 17px;
+    }
+
+    .timing {
+        font-size: 15px;
+    }
+
+    .secondContainer {
+        width: 550px;
+    }
+
+    .secondContainer .header,
+    .upcomingpart{
+        padding: 10px;
+    }
+
+    .header h1{
+        font-size: 19px;
+    }
+
+    .heading h1{
+        font-size: 19px;
+    }
+
+    button {
+        font-size: 10px;
+    }
+
+    .more-details {
+        grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    }
+
+    .climate h1 {
+        font-size: 20px;
+    }
+
+    .climate h2{
+        font-size: 17px;
+    }
+
+    .weather{
+        gap: 18px;
+    }
+    .weather h1,
+    .weather .temp{
+        font-size: 19px;
+    }
+
+    .weather i{
+        font-size: 17px;
+    }
+
+    .weather .temp .deg {
+        margin: 1px 6px 0 0;
+    }
+
+}
+
+@media(max-width:890px){
+    .firstContainer{
+        width: 240px;
+    }
+    .secondContainer{
+        width: 500px;
+    }
+}
+
+
+@media(max-width:780px){
+    .firstContainer{
+        width: 240px;
+    }
+
+    .secondContainer{
+        width: 450px;
+    }
+}
+
+@media(max-width:700px){
+    .firstContainer{
+        width: 220px;
+    }
+
+    .input-part :where(input, button){
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .input-part input{
+        font-size: 17px;
+    }
+
+    .details{
+        grid-template-columns: repeat(2, 80px);
+    }
+
+    .secondContainer{
+        width: 400px;
+    }
+
+    .more-details{
+        grid-template-columns: repeat(auto-fit,minmax(100px, auto));
+    }
+
+    .climate .heading h1{
+        font-size: 17px;
+    }
+
+    .climate h2{
+        font-size: 16px;
+    }
+
+    .weather h1,
+    .weather .temp{
+        font-size: 17px;
+    }
+
+}
+
+
+/* @media(max-width:650px){
+    body{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .firstContainer{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .firstContainer .weatherpart {
+        flex-direction: row;
+    }
+
+    .details{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        margin: 20px 25px 30px; 
+
+    }
+
+    .secondContainer{
+        width: 90%;
+        border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    }
+} */
+
+@media(max-width:650px){
+    .secondContainer{
+        display: none;
     }
 }
