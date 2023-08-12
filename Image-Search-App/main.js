@@ -23,6 +23,7 @@ const titleName = []
 let inputData = ""
 let page = 1
 let i = 0
+let iterateNum = Math.floor(Math.random() * 1000)
 let titlesarray = ["", "", "", "", "", "", "", "", "", ""]
 
 
@@ -73,6 +74,10 @@ icons.forEach((icon) => {
 //     // document.querySelector('')
 // })
 
+
+function reloadFunc(){
+    iterateNum++
+}
 
 function carouselImg() {
     // console.log('carousel')
@@ -155,15 +160,17 @@ function searchImages() {
                     alert("please enter the valid data")
                 }
             })
-
-
     }
     else {
         alert("error")
     }
 }
+
+
 function categories() {
     let pageX = Math.floor(Math.random() * 100)
+    // let pageX = iterateNum
+    // console.log(pageX)
     let a = 0;
     // console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
@@ -182,15 +189,15 @@ function categories() {
                 const tags = result.tags
                 const wrapper = document.createElement('div')
                 wrapper.dataset.Index = a
-                console.log(wrapper)   
+                // console.log(wrapper)   
                 wrapper.addEventListener("click", (e) => {
                     let indexValue = wrapper.dataset.Index
                     let selectTitle = titleName[indexValue]
-                    console.log(selectTitle)
+                    // console.log(selectTitle)
                     localStorage.setItem('title', selectTitle)
                     // storeValue()
                     window.location.href = "categories.html"
-                    console.log(titleName)
+                    // console.log(titleName)
                 })
                 wrapper.classList.add("categories-box")
                 const image = document.createElement('img')
@@ -204,7 +211,7 @@ function categories() {
                     // value == 0 ? console.log(index) :"i"
                     if (index == 0) {
                         let tag = value
-                        console.log(tag.title)
+                        // console.log(tag.title)
                         const title = document.createElement('h2')
                         title.innerHTML = tag.title
                         // console.log(i)
@@ -224,18 +231,8 @@ function categories() {
 }
 
 function storeValue(){
-    console.log(titleName)
+    // console.log(titleName)
 }
-
-// for (let i = 0; i < 10; i++) {
-//     console.log(titleName[i])
-
-// }
-// categoriescontainer.forEach((box) => {
-//     box.addEventListener("click",()=>{
-//         console.log(box)
-//     })
-// })
 
 formEl.addEventListener("submit", (e) => {
     e.preventDefault()
