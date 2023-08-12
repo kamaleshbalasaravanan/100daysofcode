@@ -21,13 +21,19 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #73919e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+/* first-container */
 
 .firstContainer {
     background-color: #87ceeb;
-    position: absolute;
-    top: 8%;
-    left: 10%;
+    /* position: absolute; */
+    /* top: 8%; */
+    /* left: 10%; */
     padding: 15px 20px;
     width: 550px;
     height: 85vh;
@@ -149,7 +155,7 @@ body {
     font-size: 24px;
 }
 
-.location i{
+.location i {
     color: #FF0000;
 }
 
@@ -157,7 +163,7 @@ body {
     font-size: 20px;
 }
 
-.timing i{
+.timing i {
     margin-right: 5px;
 }
 
@@ -174,9 +180,9 @@ body {
     height: 85vh;
     background-color: rgb(211, 229, 234);
     padding: 15px 20px;
-    position: absolute;
-    top: 8%;
-    right: 10%;
+    /* position: absolute; */
+    /* top: 8%; */
+    /* right: 10%; */
     padding: 15px 20px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -195,7 +201,7 @@ body {
     /* margin-bottom: 50px; */
 }
 
-.header span{
+.header span {
     font-size: 24px;
     font-weight: 500;
 }
@@ -252,34 +258,34 @@ button {
     gap: 30px;
 }
 
-.weather i{
+.weather i {
     font-size: 25px;
 }
 
-.weather .temp{
+.weather .temp {
     display: flex;
     font-size: 28px;
     font-weight: 500;
 }
 
-.weather .temp  .numb{
+.weather .temp .numb {
     font-weight: 600;
 }
 
-.weather .temp .deg{
+.weather .temp .deg {
     font-size: 16px;
     margin: 5px 6px 0 0;
 }
 
-.weather .sun{
+.weather .sun {
     color: #FDB813;
 }
 
-.weather .rain{
-    color:  #9099a1;
+.weather .rain {
+    color: #9099a1;
 }
 
-.weather .storm{
+.weather .storm {
     color: #2e6464;
 }
 
@@ -313,10 +319,166 @@ button {
     margin-top: 15px;
 }
 
-.climate .heading h1{
+.climate .heading h1 {
     /* margin-bottom: 10px; */
 }
 
 .climate h2 {
     text-align: center;
+}
+
+@media screen and (max-width:1600px) {
+    .firstContainer {
+        width: 500px;
+    }
+
+    .secondContainer {
+        width: 950px;
+    }
+}
+
+@media(max-width:1500px) {
+    .firstContainer {
+        width: 450px;
+    }
+
+    .secondContainer {
+        width: 900px;
+    }
+}
+
+@media(max-width:1400px) {
+    .firstContainer {
+        width: 350px;
+    }
+
+    .firstContainer .weatherpart {
+        margin: 18px 0 0;
+    }
+
+    .weatherpart img {
+        margin-top: 20px;
+    }
+
+    .details {
+        grid-template-columns: repeat(2, 120px);
+        gap: 20%;
+    }
+
+    .secondContainer {
+        width: 800px;
+    }
+
+    .more-details {
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    }
+
+    .climate h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:1190px) {
+    .firstContainer {
+        width: 300px;
+        padding: 10px 15px;
+        gap: 15px;
+    }
+
+    .firstContainer .input-part {
+        margin: 15px 0 0;
+    }
+
+    .input-part :where(input, button) {
+        width: 100%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .input-part input {
+        font-size: 18px;
+    }
+
+    .input-part .separator {
+        margin: 20px 0;
+    }
+
+    .weatherpart img {
+        max-width: 130px;
+    }
+
+    .weatherpart .temp {
+        font-size: 50px;
+    }
+
+    .weatherpart .temp .deg {
+        font-size: 32px;
+        margin: 7px 5px 0 0;
+    }
+
+    .details {
+        grid-template-columns: repeat(2, 100px);
+    }
+
+    .location,
+    .day {
+        font-size: 20px;
+    }
+
+    .timing {
+        font-size: 18px;
+    }
+
+    .secondContainer {
+        width: 750px;
+        padding: 10px 15px;
+    }
+
+    .secondContainer .header {
+        padding: 14px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .upcomingpart {
+        padding: 14px;
+    }
+
+    .heading h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+
+    .weather {
+        gap: 20px;
+    }
+
+    .weather h1 {
+        font-size: 22px;
+    }
+
+    .weather i {
+        font-size: 20px;
+    }
+
+    .weather .temp {
+        font-size: 22px;
+    }
+
+    .weather .temp .deg {
+        margin: 2px 6px 0 0;
+    }
+
+    .more-details{
+        grid-template-columns: repeat(auto-fit,minmax(120px, auto));
+    }
+
+    .climate h2{
+        font-size: 20px;
+    }
 }

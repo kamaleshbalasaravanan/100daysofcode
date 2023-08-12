@@ -14,9 +14,9 @@
     <section class="firstContainer">
         <div class="input-part">
             <!-- <p class="info-txt">Please enter valid city name</p> -->
-            <input type="text" placeholder="Enter city name" spellcheck="false" required>
+            <input type="text" id="input-field" placeholder="Enter city name" spellcheck="false" required>
             <div class="separator"></div>
-            <button>Get Device Location</button>
+            <button id="locationBtn">Get Device Location</button>
         </div>
 
             <div class="details">
@@ -59,7 +59,10 @@
         <div class="upcomingpart">
             <div class="heading">
                 <h1>Upcoming Days</h1>
-                <button>Next</button>
+               <span>
+                   <button id="previous">Previous</button>
+                <button id="next">Next</button>
+               </span>
             </div>
 
             <div class="displayweather">
@@ -73,7 +76,7 @@
                 </div>
 
                 <div class="weather">
-                    <h1>TUE</h1>
+                    <h1>TUES</h1>
                     <i class="fa-solid fa-sun sun"></i>
                     <div class="temp">
                         <span class="numb">13</span>
@@ -83,7 +86,7 @@
 
                 <div class="weather">
                     <h1>WED</h1>
-                    <i class="fa-solid fa-cloud-rain rain"></i>
+                    <i class="fa-solid fa-sun sun"></i>
                     <div class="temp">
                         <span class="numb">13</span>
                         <span class="deg">&#176;</span>C
@@ -101,7 +104,7 @@
 
                 <div class="weather">
                     <h1>FRI</h1>
-                    <i class="fa-solid fa-sun sun"></i>
+                    <i class="fa-solid fa-cloud-rain rain"></i>
                     <div class="temp">
                         <span class="numb">13</span>
                         <span class="deg">&#176;</span>C
