@@ -346,9 +346,6 @@ button:where(#previous, #next):hover {
     margin-top: 15px;
 }
 
-.climate .heading h1 {
-    /* margin-bottom: 10px; */
-}
 
 .climate-heading{
     display: flex;
