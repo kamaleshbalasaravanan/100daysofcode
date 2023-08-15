@@ -8,6 +8,7 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d513c8d533.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </head>
 
 <body>
@@ -20,22 +21,29 @@
         </div>
 
         <div class="details">
+ 
+            <!-- <div class="timing">
+                <i class="fa-solid fa-sun sun"></i>
+                <span>12.00</span>
+            </div> -->
+            <div class="day">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span id="date">Today 6 July</span>
+            </div>
+
+            <div class="clock">
+                <h2 id="time">12.30 <span id="ampm">pm</span></h2>
+            </div>
+
             <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
                 <span>Chennai, India</span>
             </div>
-            <div class="timing">
-                <i class="fa-solid fa-sun sun"></i>
-                <span>12.00</span>
-            </div>
-            <div class="day">
-                <i class="fa-solid fa-calendar-days"></i>
-                <span>Today 6 July</span>
-            </div>
-            <div class="timing">
+
+            <!-- <div class="timing">
                 <i class="fa-solid fa-moon moon"></i>
                 <span>12.00</span>
-            </div>
+            </div> -->
 
         </div>
 
@@ -60,13 +68,13 @@
         <div class="upcomingpart">
             <div class="heading">
                 <h1>Upcoming Days</h1>
-                <span>
+                <!-- <span>
                     <button id="previous">Previous</button>
                     <button id="next">Next</button>
-                </span>
+                </span> -->
             </div>
 
-            <div class="displayweather">
+            <!-- <div class="displayweather">
                 <div class="weather">
                     <h1>MON</h1>
                     <i class="fa-solid fa-sun sun"></i>
@@ -129,55 +137,82 @@
                         <span class="deg">&#176;</span>C
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="more-details">
                 <div class="climate">
-                    <div class="heading">
+                    <div class="climate-heading">
                         <h1>Humidity</h1>
-                        <i class="fa-solid fa-droplet"></i>
+                        <!-- <i class="fa-solid fa-droplet"></i> -->
                     </div>
-                    <h2 class="humidity">90% <span>bad</span></h2>
+                    <h2 class="humidity"> --- %</h2>
                 </div>
 
 
 
                 <div class="climate">
-                    <div class="heading">
+                    <div class="climate-heading">
                         <h1>Feels Like</h1>
-                        <i class="fa-solid fa-droplet"></i>
+                        <!-- <i class="fa-solid fa-droplet"></i> -->
                     </div>
-                    <h2 class="feels-like">90% <span>bad</span></h2>
+                    <h2 class="feels-like"> --- <span class="deg">&#176;</span>C</h2>
                 </div>
 
                 <div class="climate">
-                    <div class="heading">
+                    <div class="climate-heading">
                         <h1>Pressure</h1>
-                        <i class="fa-solid fa-droplet"></i>
+                        <!-- <i class="fa-solid fa-droplet"></i> -->
                     </div>
-                    <h2 class="pressure">90% <span>bad</span></h2>
+                    <h2 class="pressure"> --- hPa</h2>
                 </div>
 
                 <div class="climate">
-                    <div class="heading">
+                    <div class="climate-heading">
                         <h1>Wind</h1>
-                        <i class="fa-solid fa-droplet"></i>
+                        <!-- <i class="fa-solid fa-droplet"></i> -->
                     </div>
-                    <h2 class="wind-speed">90% <span>bad</span></h2>
+                    <h2 class="wind-speed"> --- </h2>
                 </div>
 
                 <div class="climate">
-                    <div class="heading">
-                        <h1>Temp</h1>
-                        <i class="fa-solid fa-droplet"></i>
+                    <div class="climate-heading">
+                        <h1>Temperature</h1>
+                        <!-- <i class="fa-solid fa-droplet"></i> -->
                     </div>
-                    <h2 class="min-temp">23.00</h2>
-                    <h2 class="max-temp">48.00</h2>
+                        <h2 class="min-temp"> --- </h2>
+                        <h2 class="max-temp"> --- </h2>
+                </div>
+
+                <div class="climate">
+                    <div class="climate-heading">
+                        <h1>Sunrise-set</h1>
+                        <!-- <i class="fa-solid fa-droplet"></i> -->
+                    </div>
+                    <div class="sunrise-set">
+                        <div class="timing">
+                            <i class="fa-solid fa-sun sun"></i>
+                        <span id="sunrise">12.00</span>
+                        </div>
+                        <div class="timing">
+                            <i class="fa-solid fa-moon moon"></i>
+                            <span id="sunset">12.00</span>
+                        </div>
+                    </div>
+                    <!-- <div class="timing">
+                        <i class="fa-solid fa-moon moon"></i>
+                        <span>12.00</span>
+                    </div> -->
+                    <!-- <h2 class="wind-speed">90% <span>bad</span></h2> -->
                 </div>
             </div>
         </div>
     </section>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.29.4/umd/popper.min.js"
+    integrity="sha256-f/3u5OOj9c7fUgL5NEWK2U65jTKCMSzCWp6P+l+eKGI="
+    crossorigin="anonymous"></script> -->
     <script src="main.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
 </body>
 
 </html>

@@ -146,7 +146,8 @@ body {
     grid-template-columns: repeat(2, 200px);
     /* grid-auto-rows: 100px; */
     align-items: center;
-    gap: 30%;
+    column-gap: 20%;
+    row-gap: 30%;
     /* margin: 50px auto 40px auto; */
     margin: 20px 25px 30px;
 }
@@ -154,7 +155,7 @@ body {
 .location,
 .day {
     width: 100%;
-    font-size: 24px;
+    font-size: 23px;
 }
 
 .location i {
@@ -165,10 +166,28 @@ body {
     font-size: 20px;
 }
 
+.clock{
+    width: 100%;
+}
+
+.clock h1{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.clock span{
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
 .location i,
 .day i,
 .timing i {
     margin-right: 5px;
+    font-size: 19px;
 }
 
 .timing .sun {
@@ -331,8 +350,27 @@ button:where(#previous, #next):hover {
     /* margin-bottom: 10px; */
 }
 
+.climate-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.climate-heading h1{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .climate h2 {
     text-align: center;
+}
+
+.sunrise-set{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 @media screen and (max-width:1600px) {
