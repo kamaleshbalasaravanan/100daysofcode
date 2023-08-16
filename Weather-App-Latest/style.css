@@ -737,7 +737,7 @@ button:where(#previous, #next):hover {
     }
 
     .firstContainer .input-part {
-        /* margin: 45px 25px 30px; */
+        margin: 45px 25px 30px;
     }
 
     .input-part :where(input, button) {
