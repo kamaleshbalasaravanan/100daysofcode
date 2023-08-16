@@ -720,7 +720,7 @@ button:where(#previous, #next):hover {
     body {
         height: 100%;
         overflow-x: hidden;
-        /* margin: 50px auto; */
+        margin: auto;
         flex-direction: column;
     }
 
