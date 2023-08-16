@@ -40,7 +40,7 @@ setInterval(() =>{
 // utc = date.getTime() + date.getTimezoneOffset() * 60000 
 // console.log(utc)
 
-inputField.addEventListener("keyup input", (e) => {
+inputField.addEventListener("keyup", (e) => {
     // e.preventDefault()
     if (e.key == "Enter" && inputField.value != "") {
         // console.log('hi')
