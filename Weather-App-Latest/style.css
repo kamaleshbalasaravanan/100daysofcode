@@ -166,16 +166,16 @@ body {
     font-size: 20px;
 }
 
-.clock{
+.clock {
     width: 100%;
 }
 
-.clock h1{
+.clock h1 {
     font-size: 17px;
     font-weight: 600;
 }
 
-.clock span{
+.clock span {
     font-size: 18px;
     margin-left: 5px;
     font-weight: 500;
@@ -347,14 +347,14 @@ button:where(#previous, #next):hover {
 }
 
 
-.climate-heading{
+.climate-heading {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.climate-heading h1{
+.climate-heading h1 {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -363,7 +363,7 @@ button:where(#previous, #next):hover {
     text-align: center;
 }
 
-.sunrise-set{
+.sunrise-set {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -717,7 +717,239 @@ button:where(#previous, #next):hover {
 } */
 
 @media(max-width:650px) {
+    body {
+        height: 100%;
+        overflow-x: hidden;
+        /* margin: 50px auto; */
+        flex-direction: column;
+    }
+
+    .firstContainer {
+        width: 100%;
+        height: 70vh;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .firstContainer .input-part {
+        margin: 45px 25px 30px;
+    }
+
+    .input-part :where(input, button) {
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .input-part input {
+        font-size: 18px;
+    }
+
+    .separator::before {
+        font-size: 20px;
+    }
+
+    .weatherpart img {
+        /* margin-top: 40px; */
+        /* max-width: 150px; */
+        margin-bottom: 20px;
+    }
+
+    .weatherpart .temp {
+        font-size: 72px;
+    }
+
+    .weatherpart .temp .deg {
+        font-size: 40px;
+
+    }
+
+    .location,
+    .day {
+        width: 100%;
+        font-size: 23px;
+    }
+
+    .location i,
+.day i,
+.timing i {
+    margin-right: 5px;
+    font-size: 19px;
+}
+
+    .timing {
+    font-size: 20px;
+}
+
+    .clock h2 {
+        font-size: 20px;
+    }
+
+    .clock span {
+        font-size: 18px;
+    }
+
+    .details {
+        grid-template-columns: repeat(2, 300px);
+    }
+
     .secondContainer {
-        display: none;
+        width: 100%;
+        height: 80vh;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        /* display: none; */
+    }
+
+    .header h1{
+        font-size: 28px;
+    }
+
+    .header span{
+        font-size: 20px;
+    }
+
+    .heading h1{
+        font-size: 28px;
+    }
+
+    .more-details {
+        grid-template-columns: repeat(auto-fit, minmax(180px , auto));
+        column-gap: 120px;
+        row-gap: 20px;
+    }
+
+    .climate h1 {
+        font-size: 24px;
+    }
+
+    .climate h2 {
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width:540px){
+
+    .weatherpart .temp {
+        font-size: 64px;
+    }
+
+    .weatherpart .temp .deg {
+        font-size: 34px;
+
+    }
+    .location,
+    .day {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .clock h2 {
+        font-size: 20px;
+    }
+
+    .clock span {
+        font-size: 17px;
+    }
+    .details{
+        grid-template-columns: repeat(2, 210px);
+    }
+    .more-details{
+        grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    }
+
+    .climate h1{
+        font-size: 16px;
+    }
+
+    .sunrise-set{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:445px){
+
+    .firstContainer .input-part{
+        margin: 40px 25px 30px;
+    }
+
+    .location,
+    .day {
+        font-size: 16px;
+    }
+
+    .clock h2 {
+        font-size:  17px;
+    }
+
+    .clock span {
+        font-size: 16px;
+    }
+
+    .weatherpart img{
+        max-width: 100px;
+    }
+
+    .weatherpart .temp {
+        font-size: 54px;
+    }
+
+    .weatherpart .temp .deg {
+        font-size: 30px;
+
+    }
+
+    .weatherpart .current-weather{
+        font-size: 22px;
+    }
+    .more-details{
+        grid-template-columns: repeat(auto-fit, minmax(100px , auto));
+        column-gap: 80px;
+        row-gap: 15px;
+    }
+
+    .details{
+        grid-template-columns: repeat(2, 160px);
+    }
+
+    .climate h1{
+        font-size: 14px;
+    }
+
+    .header h1{
+        font-size: 25px;
+    }
+
+    .header span{
+        font-size: 18px;
+    }
+
+    .heading h1{
+        font-size: 23px;
+    }
+
+    .location i,
+.day i,
+.timing i {
+    font-size: 15px;
+}
+
+    .timing {
+    font-size: 17px;
+}
+
+}
+
+
+@media (max-width:412px){
+    .climate h1{
+        font-size: 15px;
+    }
+
+    .climate h2{
+        font-size: 17px;
     }
 }

@@ -40,13 +40,20 @@ setInterval(() =>{
 // utc = date.getTime() + date.getTimezoneOffset() * 60000 
 // console.log(utc)
 
-inputField.addEventListener("keyup", (e) => {
+inputField.addEventListener("keyup input", (e) => {
     // e.preventDefault()
     if (e.key == "Enter" && inputField.value != "") {
         // console.log('hi')
         requestApi(inputField.value)
     }
 })
+
+// inputField.on('keyup input', (e) => {
+//     if (e.key == "Enter" && inputField.value != "") {
+//                 // console.log('hi')
+//                 requestApi(inputField.value)
+//             }
+// })
 
 function callWeather() {
     if (navigator.geolocation) {
