@@ -9,7 +9,7 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 	
 ### Day-3 Roll Dice Simulator [Roll Dice Simulator](https://100daysofcode01.netlify.app/roll-dice-simulator/)
 
-## Day-4 Pomodoro Timer [Pomodoro Timer](https://100daysofcode01.netlify.app/pomodoro-timer/)
+### Day-4 Pomodoro Timer [Pomodoro Timer](https://100daysofcode01.netlify.app/pomodoro-timer/)
 
 ### Day-5 Stopwatch [Stopwatch](https://100daysofcode01.netlify.app/stopwatch/)
 	
