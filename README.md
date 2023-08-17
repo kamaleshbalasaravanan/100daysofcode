@@ -104,8 +104,8 @@ Day-22
 	Currency Converter
 	~ https://100daysofcode01.netlify.app/currency-converter/
 	
-##Day-23
-	###Weather App
+## Day-23
+	### Weather App
 	[Weather App](https://100daysofcode01.netlify.app/weather-app-latest/)
 	
 
