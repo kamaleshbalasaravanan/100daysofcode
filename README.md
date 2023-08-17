@@ -109,7 +109,7 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 	Weather App
 		
-		[Weather App](https://100daysofcode01.netlify.app/weather-app-latest/)
+		[Weather-App](https://100daysofcode01.netlify.app/weather-app-latest/)
 	
 	
 
