@@ -37,7 +37,7 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 ## Day-18 Landing Page
 
-## Day-19 Dynamic Calendar [Dynamic Calendar](https://100daysofcode01.netlify.app/dynamic_calendaer/)
+### Day-19 Dynamic Calendar [Dynamic Calendar](https://100daysofcode01.netlify.app/dynamic_calendaer/)
 
 ## Day-20 Responsive Restaurant Page
 
