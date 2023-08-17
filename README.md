@@ -3,49 +3,49 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 [weather app](https://100daysofcode01.netlify.app/weather-app-latest/)
 
-## Day-1 Tip-calculator [Tip-calculator](https://100daysofcode01.netlify.app/day-1/tip-calculator/)
+### Day-1 Tip-calculator [Tip-calculator](https://100daysofcode01.netlify.app/day-1/tip-calculator/)
 	
-## Day-2 Age-calculator [Age-Calculator](https://100daysofcode01.netlify.app/age-calculator/)
+### Day-2 Age-calculator [Age-Calculator](https://100daysofcode01.netlify.app/age-calculator/)
 	
-## Day-3 Roll Dice Simulator [Roll Dice Simulator](https://100daysofcode01.netlify.app/roll-dice-simulator/)
+### Day-3 Roll Dice Simulator [Roll Dice Simulator](https://100daysofcode01.netlify.app/roll-dice-simulator/)
 
 ## Day-4 Pomodoro Timer [Pomodoro Timer](https://100daysofcode01.netlify.app/pomodoro-timer/)
 
-## Day-5 Stopwatch [Stopwatch](https://100daysofcode01.netlify.app/stopwatch/)
+### Day-5 Stopwatch [Stopwatch](https://100daysofcode01.netlify.app/stopwatch/)
 	
-## Day-6 Weight Converter [Weight Converter](https://100daysofcode01.netlify.app/weight-converter/)
+### Day-6 Weight Converter [Weight Converter](https://100daysofcode01.netlify.app/weight-converter/)
 
-## Day-7 Temperature Converter [Temperature Converter](https://100daysofcode01.netlify.app/temperature-converter/)
+### Day-7 Temperature Converter [Temperature Converter](https://100daysofcode01.netlify.app/temperature-converter/)
 
-## Day-8 Simple Rock Paper Scissor [Rock Paper Scissor](https://100daysofcode01.netlify.app/rockpaperscisssor/)
+### Day-8 Simple Rock Paper Scissor [Rock Paper Scissor](https://100daysofcode01.netlify.app/rockpaperscisssor/)
 
-## Day-10 Random Color Genrator [Random Color Genrator](https://100daysofcode01.netlify.app/random-color-generator/)
+### Day-10 Random Color Genrator [Random Color Genrator](https://100daysofcode01.netlify.app/random-color-generator/)
 
-## Day-11 Background Changer [Background changer](https://100daysofcode01.netlify.app/background-changer/)
+### Day-11 Background Changer [Background changer](https://100daysofcode01.netlify.app/background-changer/)
 
-## Day-12 Random  Quotes Generator Project [Quotes Generator](https://100daysofcode01.netlify.app/random-quote-generator/)
+### Day-12 Random  Quotes Generator Project [Quotes Generator](https://100daysofcode01.netlify.app/random-quote-generator/)
 
-## Day-13 Digital Clock [Digital Clock](https://100daysofcode01.netlify.app/digital-clock/)
+### Day-13 Digital Clock [Digital Clock](https://100daysofcode01.netlify.app/digital-clock/)
 	
-## Day-14 Simple Random Password [Random Password Generator](https://100daysofcode01.netlify.app/random-password-generator/)
+### Day-14 Simple Random Password [Random Password Generator](https://100daysofcode01.netlify.app/random-password-generator/)
 
-## Day-15 Simple Analog Clock [Analog clock](https://100daysofcode01.netlify.app/analog-clock/)
+### Day-15 Simple Analog Clock [Analog clock](https://100daysofcode01.netlify.app/analog-clock/)
 
-## Day-16 Simple Recipe Book [Recipe Book](https://100daysofcode01.netlify.app/recipe-book-app/)
+### Day-16 Simple Recipe Book [Recipe Book](https://100daysofcode01.netlify.app/recipe-book-app/)
 
-## Day-17 Tic Tac Toe [Tic Tac Toe](https://100daysofcode01.netlify.app/tic-tac-toe/)
+### Day-17 Tic Tac Toe [Tic Tac Toe](https://100daysofcode01.netlify.app/tic-tac-toe/)
 
-## Day-18 Landing Page
+### Day-18 Landing Page
 
 ### Day-19 Dynamic Calendar [Dynamic Calendar](https://100daysofcode01.netlify.app/dynamic_calendaer/)
 
-## Day-20 Responsive Restaurant Page
+### Day-20 Responsive Restaurant Page
 
-## Day-21 Country Guide [country guide](https://100daysofcode01.netlify.app/country-guide-app/)
+### Day-21 Country Guide [country guide](https://100daysofcode01.netlify.app/country-guide-app/)
 
-## Day-22 Currency Converter [currency-converter](https://100daysofcode01.netlify.app/currency-converter/)
+### Day-22 Currency Converter [currency-converter](https://100daysofcode01.netlify.app/currency-converter/)
 	
-## Day-23 Weather App [weather app](https://100daysofcode01.netlify.app/weather-app-latest/)
+### Day-23 Weather App [weather app](https://100daysofcode01.netlify.app/weather-app-latest/)
 	
 	
 	
