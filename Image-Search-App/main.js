@@ -83,7 +83,7 @@ function carouselImg() {
     // console.log('carousel')
     let pageX = Math.floor(Math.random() * 100)
     // let topic = "wallpapers"
-    const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
+    const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="wallpaper"&client_id=${accesskey}`
 
     fetch(url)
         .then((resp) => resp.json())

@@ -441,6 +441,7 @@ input::placeholder{
     color: #000;
     margin: 8px 0 16px;
     text-align: justify;
+    text-transform: lowercase;
 }
 
 .contact{
