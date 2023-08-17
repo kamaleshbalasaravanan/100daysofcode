@@ -102,7 +102,8 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 ## Day-22
 
 	Currency Converter
-	~ https://100daysofcode01.netlify.app/currency-converter/
+	 
+	[currency-converter](https://100daysofcode01.netlify.app/currency-converter/)
 	
 ## Day-23
 
