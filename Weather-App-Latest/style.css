@@ -65,12 +65,28 @@ body {
 .input-part input {
     font-size: 20px;
     text-align: center;
-    border: 1px solid #bfbfbf;
+    /* border: 1px solid #bfbfbf; */
 }
 
 .input-part input::placeholder {
     color: #ccc;
     letter-spacing: 1px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 1px solid #bfbfbf;
+}
+
+.input i {
+    margin: 0 15px;
+    font-size: 20px;
+    color: #bfbfbf;
+    cursor: pointer;
 }
 
 /* .input-part input:is(:focus, :valid) {
@@ -442,6 +458,10 @@ button:where(#previous, #next):hover {
         font-size: 18px;
     }
 
+    .input i{
+        font-size: 18px;
+    }
+
     .input-part .separator {
         margin: 20px 0;
     }
@@ -654,6 +674,10 @@ button:where(#previous, #next):hover {
         font-size: 17px;
     }
 
+    .input i{
+        font-size: 17px;
+    }
+
     .details {
         grid-template-columns: repeat(2, 80px);
     }
@@ -717,10 +741,12 @@ button:where(#previous, #next):hover {
 } */
 
 @media(max-width:650px) {
-    *{
+    * {
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
     }
+
     body {
         width: 100%;
         height: 100%;
@@ -750,6 +776,10 @@ button:where(#previous, #next):hover {
         font-size: 18px;
     }
 
+    .input i {
+        font-size: 18px;
+    }
+
     .separator::before {
         font-size: 20px;
     }
@@ -776,15 +806,15 @@ button:where(#previous, #next):hover {
     }
 
     .location i,
-.day i,
-.timing i {
-    margin-right: 5px;
-    font-size: 19px;
-}
+    .day i,
+    .timing i {
+        margin-right: 5px;
+        font-size: 19px;
+    }
 
     .timing {
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
 
     .clock h2 {
         font-size: 20px;
@@ -806,20 +836,20 @@ button:where(#previous, #next):hover {
         /* display: none; */
     }
 
-    .header h1{
+    .header h1 {
         font-size: 28px;
     }
 
-    .header span{
+    .header span {
         font-size: 20px;
     }
 
-    .heading h1{
+    .heading h1 {
         font-size: 28px;
     }
 
     .more-details {
-        grid-template-columns: repeat(auto-fit, minmax(180px , auto));
+        grid-template-columns: repeat(auto-fit, minmax(180px, auto));
         column-gap: 120px;
         row-gap: 20px;
     }
@@ -831,10 +861,10 @@ button:where(#previous, #next):hover {
     .climate h2 {
         font-size: 20px;
     }
-    
+
 }
 
-@media (max-width:540px){
+@media (max-width:540px) {
 
     .weatherpart .temp {
         font-size: 64px;
@@ -844,6 +874,7 @@ button:where(#previous, #next):hover {
         font-size: 34px;
 
     }
+
     .location,
     .day {
         width: 100%;
@@ -857,18 +888,20 @@ button:where(#previous, #next):hover {
     .clock span {
         font-size: 17px;
     }
-    .details{
+
+    .details {
         grid-template-columns: repeat(2, 210px);
     }
-    .more-details{
+
+    .more-details {
         grid-template-columns: repeat(auto-fit, minmax(130px, auto));
     }
 
-    .climate h1{
+    .climate h1 {
         font-size: 16px;
     }
 
-    .sunrise-set{
+    .sunrise-set {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -876,10 +909,10 @@ button:where(#previous, #next):hover {
     }
 }
 
-@media (max-width:445px){
+@media (max-width:445px) {
 
-    .firstContainer .input-part{
-        margin: 40px 25px 30px;
+    .firstContainer .input-part {
+        margin: 40px 10px 30px;
     }
 
     .location,
@@ -888,14 +921,14 @@ button:where(#previous, #next):hover {
     }
 
     .clock h2 {
-        font-size:  17px;
+        font-size: 17px;
     }
 
     .clock span {
         font-size: 16px;
     }
 
-    .weatherpart img{
+    .weatherpart img {
         max-width: 100px;
     }
 
@@ -908,54 +941,55 @@ button:where(#previous, #next):hover {
 
     }
 
-    .weatherpart .current-weather{
+    .weatherpart .current-weather {
         font-size: 22px;
     }
-    .more-details{
-        grid-template-columns: repeat(auto-fit, minmax(100px , auto));
+
+    .more-details {
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
         column-gap: 80px;
         row-gap: 15px;
     }
 
-    .details{
+    .details {
         grid-template-columns: repeat(2, 160px);
     }
 
-    .climate h1{
+    .climate h1 {
         font-size: 14px;
     }
 
-    .header h1{
+    .header h1 {
         font-size: 25px;
     }
 
-    .header span{
+    .header span {
         font-size: 18px;
     }
 
-    .heading h1{
+    .heading h1 {
         font-size: 23px;
     }
 
     .location i,
-.day i,
-.timing i {
-    font-size: 15px;
-}
-
-    .timing {
-    font-size: 17px;
-}
-
-}
-
-
-@media (max-width:412px){
-    .climate h1{
+    .day i,
+    .timing i {
         font-size: 15px;
     }
 
-    .climate h2{
+    .timing {
+        font-size: 17px;
+    }
+
+}
+
+
+@media (max-width:412px) {
+    .climate h1 {
+        font-size: 15px;
+    }
+
+    .climate h2 {
         font-size: 17px;
     }
 }

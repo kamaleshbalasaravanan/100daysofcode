@@ -3,6 +3,7 @@ const secondContainer = document.querySelector('.secondContainer')
 const weatherIcon = firstContainer.querySelector('.weatherpart img')
 const inputField = document.querySelector('#input-field')
 const locationBtn = document.querySelector('#locationBtn')
+const searchBtn = document.querySelector('.input-part #searchbtn')
 
 console.log(firstContainer, secondContainer)
 
@@ -43,6 +44,16 @@ setInterval(() =>{
 inputField.addEventListener("keyup", (e) => {
     // e.preventDefault()
     if (e.key == "Enter" && inputField.value != "") {
+        // console.log('hi')
+        requestApi(inputField.value)
+    }
+})
+
+searchBtn.addEventListener("click", (e)=>{
+    console.log(e)
+    // e.preventDefault()
+    // console.log('hi')
+    if (inputField.value != "") {
         // console.log('hi')
         requestApi(inputField.value)
     }
