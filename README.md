@@ -107,6 +107,6 @@ Day-22
 Day-23
 
 	Weather App
-	~ [title](https://100daysofcode01.netlify.app/weather-app-latest/)
+	[Weather App](https://100daysofcode01.netlify.app/weather-app-latest/)
 	
 
