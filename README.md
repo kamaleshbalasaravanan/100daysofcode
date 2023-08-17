@@ -19,6 +19,7 @@ Day-4
 
 Day-5
 	Stopwatch
+	~ https://100daysofcode01.netlify.app/stopwatch/
 	
 Day-6
 	Weight Converter
@@ -32,12 +33,9 @@ Day-8
 	Simple Rock Paper Scissor
 	~ https://100daysofcode01.netlify.app/rockpaperscisssor/
 
-Day-9
+Day-10
 	Random Color Genrator
 	~ https://100daysofcode01.netlify.app/random-color-generator/
-	
-Day-10
-	Landing Page
 
 Day-11
 	Background Changer
@@ -49,13 +47,14 @@ Day-12
 
 Day-13
 	Digital Clock
-
+	~ https://100daysofcode01.netlify.app/digital-clock/
 Day-14
 	Simple Random Password
 	~ https://100daysofcode01.netlify.app/random-password-generator/
 
 Day-15
 	Simple Analog Clock
+	~ https://100daysofcode01.netlify.app/analog-clock/
 
 Day-16
 	Simple Recipe Book
