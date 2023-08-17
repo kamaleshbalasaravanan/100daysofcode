@@ -13,35 +13,17 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 ## Day-5 Stopwatch [Stopwatch](https://100daysofcode01.netlify.app/stopwatch/)
 	
-## Day-6
+## Day-6 Weight Converter [Weight Converter](https://100daysofcode01.netlify.app/weight-converter/)
 
-	Weight Converter
-	~ https://100daysofcode01.netlify.app/weight-converter/
+## Day-7 Temperature Converter [Temperature Converter](https://100daysofcode01.netlify.app/temperature-converter/)
 
-## Day-7
+## Day-8 Simple Rock Paper Scissor [Rock Paper Scissor](https://100daysofcode01.netlify.app/rockpaperscisssor/)
 
-	Temperature Converter
-	~ https://100daysofcode01.netlify.app/temperature-converter/
+## Day-10 Random Color Genrator [Random Color Genrator](https://100daysofcode01.netlify.app/random-color-generator/)
 
-## Day-8
+## Day-11 Background Changer [Background changer](https://100daysofcode01.netlify.app/background-changer/)
 
-	Simple Rock Paper Scissor
-	~ https://100daysofcode01.netlify.app/rockpaperscisssor/
-
-## Day-10
-
-	Random Color Genrator
-	~ https://100daysofcode01.netlify.app/random-color-generator/
-
-## Day-11
-
-	Background Changer
-	~ https://100daysofcode01.netlify.app/background-changer/
-
-## Day-12
-
-	Random  Quotes Generator Project
-	~ https://100daysofcode01.netlify.app/random-quote-generator/
+## Day-12 Random  Quotes Generator Project [Quotes Generator](https://100daysofcode01.netlify.app/random-quote-generator/)
 
 ## Day-13 Digital Clock [Digital Clock](https://100daysofcode01.netlify.app/digital-clock/)
 	
