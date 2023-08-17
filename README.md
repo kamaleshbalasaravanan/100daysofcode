@@ -58,54 +58,25 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 	Random  Quotes Generator Project
 	~ https://100daysofcode01.netlify.app/random-quote-generator/
 
-## Day-13
-
-	Digital Clock
-	~ https://100daysofcode01.netlify.app/digital-clock/
+## Day-13 Digital Clock [Digital Clock](https://100daysofcode01.netlify.app/digital-clock/)
 	
-## Day-14
+## Day-14 Simple Random Password [Random Password Generator](https://100daysofcode01.netlify.app/random-password-generator/)
 
-	Simple Random Password
-	~ https://100daysofcode01.netlify.app/random-password-generator/
+## Day-15 Simple Analog Clock [Analog clock](https://100daysofcode01.netlify.app/analog-clock/)
 
-## Day-15
+## Day-16 Simple Recipe Book [Recipe Book](https://100daysofcode01.netlify.app/recipe-book-app/)
 
-	Simple Analog Clock
-	~ https://100daysofcode01.netlify.app/analog-clock/
+## Day-17 Tic Tac Toe [Tic Tac Toe](https://100daysofcode01.netlify.app/tic-tac-toe/)
 
-## Day-16
+## Day-18 Landing Page
 
-	Simple Recipe Book
-	~ https://100daysofcode01.netlify.app/recipe-book-app/
+## Day-19 Dynamic Calendar [Dynamic Calendar](https://100daysofcode01.netlify.app/dynamic_calendaer/)
 
-## Day-17
+## Day-20 Responsive Restaurant Page
 
-	Tic Tac Toe
-	~ https://100daysofcode01.netlify.app/tic-tac-toe/
+## Day-21 Country Guide [country guide](https://100daysofcode01.netlify.app/country-guide-app/)
 
-## Day-18
-
-	Landing Page
-
-## Day-19
-
-	Dynamic Calendar
-	~ https://100daysofcode01.netlify.app/dynamic_calendaer/
-
-## Day-20
-
-	Responsive Restaurant Page
-
-## Day-21
-
-	Country Guide
-	` https://100daysofcode01.netlify.app/country-guide-app/
-
-## Day-22
-
-	Currency Converter
-	 
-		[currency-converter](https://100daysofcode01.netlify.app/currency-converter/)
+## Day-22 Currency Converter [currency-converter](https://100daysofcode01.netlify.app/currency-converter/)
 	
 ## Day-23 Weather App [weather app](https://100daysofcode01.netlify.app/weather-app-latest/)
 	
