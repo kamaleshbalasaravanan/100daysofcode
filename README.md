@@ -3,30 +3,15 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 [weather app](https://100daysofcode01.netlify.app/weather-app-latest/)
 
-## Day-1
-
-	Tip-calculator
-	~ https://100daysofcode01.netlify.app/day-1/tip-calculator/
+## Day-1 Tip-calculator [Tip-calculator](https://100daysofcode01.netlify.app/day-1/tip-calculator/)
 	
-## Day-2
-
-	Age-calculator
-	~ https://100daysofcode01.netlify.app/age-calculator/
+## Day-2 Age-calculator [Age-Calculator](https://100daysofcode01.netlify.app/age-calculator/)
 	
-## Day-3
+## Day-3 Roll Dice Simulator [Roll Dice Simulator](https://100daysofcode01.netlify.app/roll-dice-simulator/)
 
-	Roll Dice Simulator
-	~ https://100daysofcode01.netlify.app/roll-dice-simulator/
+## Day-4 Pomodoro Timer [Pomodoro Timer](https://100daysofcode01.netlify.app/pomodoro-timer/)
 
-## Day-4
-
-	Pomodoro Timer
-	~ https://100daysofcode01.netlify.app/pomodoro-timer/
-
-## Day-5
-
-	Stopwatch
-	~ https://100daysofcode01.netlify.app/stopwatch/
+## Day-5 Stopwatch [Stopwatch](https://100daysofcode01.netlify.app/stopwatch/)
 	
 ## Day-6
 
