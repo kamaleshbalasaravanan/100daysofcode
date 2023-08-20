@@ -8,6 +8,7 @@ const previousDisplayNumber = document.querySelector(".prevnum")
 window.addEventListener("keydown", handleKeyPress)
 
 const equal = document.querySelector(".equalbox")
+const deletebtn = document.querySelector(".delete")
 const decimal = document.querySelector(".decimal")
 const clear = document.querySelector(".clear")
 
@@ -21,7 +22,8 @@ equal.addEventListener("click", () => {
     }
 })
 clear.addEventListener("click", clearCalculator)
-decimal.addEventListener("click",addDecimal)
+decimal.addEventListener("click", addDecimal)
+deletebtn.addEventListener("click",handleDelete)
 
 numberBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -48,23 +50,23 @@ operators.forEach((btn) => {
 
 function handleOperator(op) {
 
-    if(prevnum !== "" && currentnum !== "" && operator === ""){
+    if (prevnum !== "" && currentnum !== "" && operator === "") {
         prevnum = ""
         currentDisplayNumber.textContent = currentnum
     }
 
-    if(prevnum === ""){
+    if (prevnum === "") {
         prevnum = currentnum
         checkOperator(op)
     }
-    else if(currentnum === ""){
+    else if (currentnum === "") {
         checkOperator(op)
     }
-    else{
+    else {
         calculate()
         operator = op
         currentDisplayNumber.textContent = "0"
-        previousDisplayNumber.textContent = prevnum + " " +operator
+        previousDisplayNumber.textContent = prevnum + " " + operator
     }
 }
 
@@ -133,8 +135,8 @@ function clearCalculator() {
     previousDisplayNumber.textContent = ""
 }
 
-function addDecimal(){
-    if(!currentnum.includes(".")){
+function addDecimal() {
+    if (!currentnum.includes(".")) {
         currentnum += "."
         currentDisplayNumber.textContent = currentnum
     }
@@ -147,32 +149,45 @@ function addDecimal(){
 
 function handleKeyPress(e) {
     e.preventDefault()
-    if(e.key >= 0 && e.key <= 9){
+    if (e.key >= 0 && e.key <= 9) {
         handleNumber(e.key)
     }
 
-    if(e.key === "Enter" || e.key === "=" && currentnum != "" && prevnum != ""){
+    if (e.key === "Enter" || e.key === "=" && currentnum != "" && prevnum != "") {
         compute()
     }
 
-    if(e.key === "+" || e.key === "-" || e.key === "/"){
+    if (e.key === "+" || e.key === "-" || e.key === "/") {
         handleOperator(e.key)
     }
 
-    if(e.key === "*"){
+    if (e.key === "*") {
         handleOperator("x")
     }
 
-    if(e.key === "."){
+    if (e.key === ".") {
         addDecimal()
     }
 
-    if(e.key === "Backspace"){
+    if (e.key === "Backspace") {
         handleDelete()
     }
-    console.log(e.key   )
+    console.log(e.key)
 }
 
-function handleDelete(){
-    
+function handleDelete() {
+    if (currentnum !== "") {
+        currentnum = currentnum.slice(0, -1)
+        currentDisplayNumber.textContent = currentnum
+
+        if (currentnum === "") {
+            currentDisplayNumber.textContent = "0"
+
+        }
+    }
+
+    if(currentnum === "" && prevnum !== "" && operator === ""){
+        prevnum = prevnum.slice(0, -1)
+        currentDisplayNumber.textContent = prevnum
+    }
 }

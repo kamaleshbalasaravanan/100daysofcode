@@ -78,6 +78,10 @@ form input.equalbox{
     width: 145px;
 }
 
+form input:hover{
+    background-color: rgba(174, 169, 169, 0.1);
+}
+
 /* responsive */
 
 @media(max-width:391px) and (min-width:270px){
