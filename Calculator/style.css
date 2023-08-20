@@ -44,19 +44,35 @@ body{
     border-radius: 10px;
 }
 
-form .display{
+/* form .display{
     display: flex;
     justify-content: flex-end;
     margin: 20px 0;
+} */
+
+form .display{
+    display: flex;
+    flex-direction: column;
 }
 
-form .display input{
+.display h3{
+    color: #fff;
+    background-color: transparent;
+    padding: 5px 10px;
+    width: 100%;
+    height: 60px;
     text-align: right;
-    font-size: 45px;
-    flex: 1;
+    font-size: 40px;
+    letter-spacing: 1px;
+    /* flex: 1; */
     box-shadow: none;
-    border: 1px solid #93a5cf;
+    /* border: 1px solid #93a5cf;    */
 }
+
+.display .prevnum{
+    font-size: 28px;
+}
+
 
 form input.equalbox{
     width: 145px;
