@@ -36,11 +36,11 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 ### Day-17 Tic Tac Toe [Tic Tac Toe](https://100daysofcode01.netlify.app/tic-tac-toe/)
 
-### Day-18 Landing Page
+### Day-18 Starbucks Landing Page [Starbucks](https://100daysofcode01.netlify.app/starbucks-landing-page/)
 
 ### Day-19 Dynamic Calendar [Dynamic Calendar](https://100daysofcode01.netlify.app/dynamic_calendaer/)
 
-### Day-20 Responsive Restaurant Page
+### Day-20 Responsive Restaurant Page [Restaurant Page](https://100daysofcode01.netlify.app/restaurant-page/)
 
 ### Day-21 Country Guide [country guide](https://100daysofcode01.netlify.app/country-guide-app/)
 
