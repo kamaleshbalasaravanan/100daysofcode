@@ -2,6 +2,9 @@ let currentnum = ""
 let prevnum = ""
 let operator = ""
 
+let previousData = []
+let i=0
+
 const currentDisplayNumber = document.querySelector(".currentnum")
 const previousDisplayNumber = document.querySelector(".prevnum")
 
@@ -15,6 +18,7 @@ const clear = document.querySelector(".clear")
 const numberBtns = document.querySelectorAll('.number')
 const operators = document.querySelectorAll('.operator')
 
+const result = document.querySelector(".result")
 
 equal.addEventListener("click", () => {
     if (currentnum != "" && prevnum != "") {
@@ -129,10 +133,12 @@ function displayResults() {
 }
 
 function clearCalculator() {
+    storeResults()
     currentnum = ""
     prevnum = ""
     currentDisplayNumber.textContent = "0"
     previousDisplayNumber.textContent = ""
+    
 }
 
 function addDecimal() {
@@ -203,4 +209,29 @@ function handleDelete() {
         // currentnum = 0
         currentDisplayNumber.textContent = "0"
     }
+}
+
+function storeResults(){
+    if(previousData !== ""){
+        previousData[i] = prevnum
+    }
+
+    else if(previousData === ""){
+        previousData[i] == prevnum
+    }
+
+    i++
+
+    displayStoreResults()
+    // console.log(previousData)    
+}   
+
+function displayStoreResults(){
+     const resultval = document.createElement('h4')
+     previousData.map((val, index) => {
+        resultval.textContent = ". "+val
+     })
+
+     result.appendChild(resultval)
+    console.log(resultval)
 }

@@ -82,6 +82,24 @@ form input:hover{
     background-color: rgba(174, 169, 169, 0.1);
 }
 
+.result-box h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result h4{
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
 /* responsive */
 
 @media(max-width:391px) and (min-width:270px){
