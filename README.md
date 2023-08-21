@@ -18,6 +18,8 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 ### Day-8 Simple Rock Paper Scissor [Rock Paper Scissor](https://100daysofcode01.netlify.app/rockpaperscisssor/)
 
+###Day-9 Simple Cards Slider [Cards Slider](https://100daysofcode01.netlify.app/cards-slider/)
+
 ### Day-10 Random Color Genrator [Random Color Genrator](https://100daysofcode01.netlify.app/random-color-generator/)
 
 ### Day-11 Background Changer [Background changer](https://100daysofcode01.netlify.app/background-changer/)
