@@ -23,7 +23,7 @@ equal.addEventListener("click", () => {
 })
 clear.addEventListener("click", clearCalculator)
 decimal.addEventListener("click", addDecimal)
-deletebtn.addEventListener("click",handleDelete)
+deletebtn.addEventListener("click", handleDelete)
 
 numberBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -176,18 +176,31 @@ function handleKeyPress(e) {
 }
 
 function handleDelete() {
-    if (currentnum !== "") {
+
+    if (currentnum !== "" && prevnum !== "Error" ) {
         currentnum = currentnum.slice(0, -1)
         currentDisplayNumber.textContent = currentnum
 
         if (currentnum === "") {
             currentDisplayNumber.textContent = "0"
-
         }
     }
 
-    if(currentnum === "" && prevnum !== "" && operator === ""){
+    if (currentnum === "" && prevnum !== "" && operator === "") {
+        
+
+        if(prev === "Error"){
+            prevnum = ""
+            currentDisplayNumber.textContent = "0"
+        }
+
         prevnum = prevnum.slice(0, -1)
         currentDisplayNumber.textContent = prevnum
+    }
+
+    if (prevnum == "Error") {
+        prevnum = ""
+        // currentnum = 0
+        currentDisplayNumber.textContent = "0"
     }
 }
