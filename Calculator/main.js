@@ -232,11 +232,16 @@ function storeResults() {
 
 function displayStoreResults() {
     const resultval = document.createElement('h4')
+    console.log(previousData.length)
     previousData.map((val, index) => {
         if (val !== "") {
             resultval.textContent = val
         }
     })
+
+    // for(let i =0; i<previousData.length; i++){
+    //     result.textContent = previousData[i]
+    // }
 
     result.appendChild(resultval)
     // console.log(resultval)
