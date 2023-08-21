@@ -82,6 +82,13 @@ form input:hover{
     background-color: rgba(174, 169, 169, 0.1);
 }
 
+.result-box{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .result-box h2{
     text-align: center;
     text-transform: uppercase;

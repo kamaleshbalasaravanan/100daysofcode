@@ -3,7 +3,7 @@ let prevnum = ""
 let operator = ""
 
 let previousData = []
-let i=0
+let i = 0
 
 const currentDisplayNumber = document.querySelector(".currentnum")
 const previousDisplayNumber = document.querySelector(".prevnum")
@@ -18,6 +18,7 @@ const clear = document.querySelector(".clear")
 const numberBtns = document.querySelectorAll('.number')
 const operators = document.querySelectorAll('.operator')
 
+const resultbox = document.querySelector(".result-box")
 const result = document.querySelector(".result")
 
 equal.addEventListener("click", () => {
@@ -133,12 +134,15 @@ function displayResults() {
 }
 
 function clearCalculator() {
-    storeResults()
+    if(prevnum !== "" ){
+        resultbox.style.display = "flex"
+        storeResults()
+    }
     currentnum = ""
     prevnum = ""
     currentDisplayNumber.textContent = "0"
     previousDisplayNumber.textContent = ""
-    
+
 }
 
 function addDecimal() {
@@ -183,7 +187,7 @@ function handleKeyPress(e) {
 
 function handleDelete() {
 
-    if (currentnum !== "" && prevnum !== "Error" ) {
+    if (currentnum !== "" && prevnum !== "Error") {
         currentnum = currentnum.slice(0, -1)
         currentDisplayNumber.textContent = currentnum
 
@@ -193,9 +197,9 @@ function handleDelete() {
     }
 
     if (currentnum === "" && prevnum !== "" && operator === "") {
-        
 
-        if(prev === "Error"){
+
+        if (prev === "Error") {
             prevnum = ""
             currentDisplayNumber.textContent = "0"
         }
@@ -211,12 +215,12 @@ function handleDelete() {
     }
 }
 
-function storeResults(){
-    if(previousData !== ""){
+function storeResults() {
+    if (previousData !== "") {
         previousData[i] = prevnum
     }
 
-    else if(previousData === ""){
+    else if (previousData === "") {
         previousData[i] == prevnum
     }
 
@@ -224,14 +228,16 @@ function storeResults(){
 
     displayStoreResults()
     // console.log(previousData)    
-}   
+}
 
-function displayStoreResults(){
-     const resultval = document.createElement('h4')
-     previousData.map((val, index) => {
-        resultval.textContent = ". "+val
-     })
+function displayStoreResults() {
+    const resultval = document.createElement('h4')
+    previousData.map((val, index) => {
+        if (val !== "") {
+            resultval.textContent = val
+        }
+    })
 
-     result.appendChild(resultval)
-    console.log(resultval)
+    result.appendChild(resultval)
+    // console.log(resultval)
 }
