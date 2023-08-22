@@ -22,6 +22,7 @@ const titleName = []
 // console.log(categoriescontainer)
 let inputData = ""
 let page = 1
+// let pageX
 let i = 0
 let iterateNum = Math.floor(Math.random() * 1000)
 let titlesarray = ["", "", "", "", "", "", "", "", "", ""]
@@ -75,9 +76,9 @@ icons.forEach((icon) => {
 // })
 
 
-function reloadFunc(){
-    iterateNum++
-}
+// function reloadFunc(){
+//     pageX = Math.floor(Math.random() * 100)
+// }
 
 function carouselImg() {
     // console.log('carousel')
@@ -169,8 +170,6 @@ function searchImages() {
 
 function categories() {
     let pageX = Math.floor(Math.random() * 100)
-    // let pageX = iterateNum
-    // console.log(pageX)
     let a = 0;
     // console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
@@ -230,10 +229,6 @@ function categories() {
         })
 }
 
-function storeValue(){
-    // console.log(titleName)
-}
-
 formEl.addEventListener("submit", (e) => {
     e.preventDefault()
     page = 1
@@ -246,6 +241,7 @@ showMore.addEventListener("click", () => {
 })
 
 next.addEventListener("click", () => {
+    reloadFunc()
     categories()
 })
 

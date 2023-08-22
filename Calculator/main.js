@@ -152,38 +152,6 @@ function addDecimal() {
     }
 }
 
-// function handleKeyPress(e) {
-//     e.preventDefault()
-//     console.log(e.key)
-// }
-
-function handleKeyPress(e) {
-    e.preventDefault()
-    if (e.key >= 0 && e.key <= 9) {
-        handleNumber(e.key)
-    }
-
-    if (e.key === "Enter" || e.key === "=" && currentnum != "" && prevnum != "") {
-        compute()
-    }
-
-    if (e.key === "+" || e.key === "-" || e.key === "/") {
-        handleOperator(e.key)
-    }
-
-    if (e.key === "*") {
-        handleOperator("x")
-    }
-
-    if (e.key === ".") {
-        addDecimal()
-    }
-
-    if (e.key === "Backspace") {
-        handleDelete()
-    }
-    console.log(e.key)
-}
 
 function handleDelete() {
 
@@ -215,6 +183,43 @@ function handleDelete() {
     }
 }
 
+
+
+// function handleKeyPress(e) {
+//     e.preventDefault()
+//     console.log(e.key)
+// }
+
+function handleKeyPress(e) {
+    e.preventDefault()
+    if (e.key >= 0 && e.key <= 9) {
+        handleNumber(e.key)
+    }
+
+    if (e.key === "Enter" || e.key === "=" && currentnum != "" && prevnum != "") {
+        calculate()
+    }
+
+    if (e.key === "+" || e.key === "-" || e.key === "/") {
+        handleOperator(e.key)
+    }
+
+    if (e.key === "*") {
+        handleOperator("x")
+    }
+
+    if (e.key === ".") {
+        addDecimal()
+    }
+
+    if (e.key === "Backspace") {
+        handleDelete()
+    }
+    console.log(e.key)
+}
+
+
+
 function storeResults() {
     if (previousData !== "") {
         previousData[i] = prevnum
@@ -231,18 +236,53 @@ function storeResults() {
 }
 
 function displayStoreResults() {
+    let count = 0
     const resultval = document.createElement('h4')
     console.log(previousData.length)
+
+
+
+
     previousData.map((val, index) => {
-        if (val !== "") {
-            resultval.textContent = val
+
+        if(count <4){
+            if (val !== "") {
+                resultval.textContent = val
+                console.log(val)
+                console.log(count)
+            }
         }
+
+        count++
     })
+
+    if(count > 4){
+        previousData.shift()
+    }
 
     // for(let i =0; i<previousData.length; i++){
     //     result.textContent = previousData[i]
     // }
 
     result.appendChild(resultval)
-    // console.log(resultval)
+
+
+    // previousData.map((val, index) => {
+    //     if(val !== ""){
+    //         resultval.textContent = val
+    
+    //         if(count < 4){
+    //             previousData.shift()
+    //             result.appendChild(resultval)
+    //         }
+    //         else{
+    //             result.appendChild(resultval)
+    //         }
+    //     }
+    // })
+    // count++
+    // result.appendChild(resultval)
+    
+    // console.log(previousData)
+    console.log(previousData)
 }
