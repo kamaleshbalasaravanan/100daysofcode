@@ -134,9 +134,10 @@ function displayResults() {
 }
 
 function clearCalculator() {
-    if(prevnum !== "" ){
+    if (prevnum !== "") {
         resultbox.style.display = "flex"
         storeResults()
+        displayStoreResults()
     }
     currentnum = ""
     prevnum = ""
@@ -221,68 +222,89 @@ function handleKeyPress(e) {
 
 
 function storeResults() {
-    if (previousData !== "") {
-        previousData[i] = prevnum
-    }
 
-    else if (previousData === "") {
-        previousData[i] == prevnum
+    if (previousData.length <= 4) {
+        if (previousData !== "") {
+            previousData[i] = prevnum
+        }
+
+        else if (previousData === "") {
+            previousData[i] == prevnum
+        }
+
+    }
+    else if (previousData.length >= 4) {
+        previousData.shift()
+        previousData[i] = prevnum
     }
 
     i++
 
-    displayStoreResults()
+
+
+    // displayStoreResults()
     // console.log(previousData)    
 }
+
+// function displayStoreResults() {
+//     let count = 0
+//     const resultval = document.createElement('h4')
+//     console.log(previousData.length)
+
+//     previousData.map((val, index) => {
+
+//         if(count <4){
+//             if (val !== "") {
+//                 resultval.textContent = val
+//                 console.log(val)
+//                 console.log(count)
+//             }
+//         }
+
+//         count++
+//     })
+
+//     if(count > 4){
+//         previousData.shift()
+//     }
+
+//     // for(let i =0; i<previousData.length; i++){
+//     //     result.textContent = previousData[i]
+//     // }
+
+//     result.appendChild(resultval)
+
+
+//     // previousData.map((val, index) => {
+//     //     if(val !== ""){
+//     //         resultval.textContent = val
+
+//     //         if(count < 4){
+//     //             previousData.shift()
+//     //             result.appendChild(resultval)
+//     //         }
+//     //         else{
+//     //             result.appendChild(resultval)
+//     //         }
+//     //     }
+//     // })
+//     // count++
+//     // result.appendChild(resultval)
+
+//     // console.log(previousData)
+//     console.log(previousData)
+// }
 
 function displayStoreResults() {
     let count = 0
     const resultval = document.createElement('h4')
-    console.log(previousData.length)
+    console.log(previousData)
 
-
-
-
-    previousData.map((val, index) => {
-
-        if(count <4){
-            if (val !== "") {
-                resultval.textContent = val
-                console.log(val)
-                console.log(count)
-            }
+    previousData.map((val) => {
+        if (val !== "") {
+            resultval.textContent = val
         }
-
-        count++
+        result.appendChild(resultval)
     })
 
-    if(count > 4){
-        previousData.shift()
-    }
-
-    // for(let i =0; i<previousData.length; i++){
-    //     result.textContent = previousData[i]
-    // }
-
-    result.appendChild(resultval)
-
-
-    // previousData.map((val, index) => {
-    //     if(val !== ""){
-    //         resultval.textContent = val
-    
-    //         if(count < 4){
-    //             previousData.shift()
-    //             result.appendChild(resultval)
-    //         }
-    //         else{
-    //             result.appendChild(resultval)
-    //         }
-    //     }
-    // })
-    // count++
-    // result.appendChild(resultval)
-    
-    // console.log(previousData)
-    console.log(previousData)
 }
