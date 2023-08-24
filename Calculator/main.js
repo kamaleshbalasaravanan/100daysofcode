@@ -216,31 +216,31 @@ function handleKeyPress(e) {
     if (e.key === "Backspace") {
         handleDelete()
     }
-    console.log(e.key)
+    // console.log(e.key)
 }
 
 
 
 function storeResults() {
 
-    if (previousData.length <= 4) {
+    if (previousData.length <= 3) {
         if (previousData !== "") {
             previousData[i] = prevnum
+            console.log(previousData[i])
         }
 
         else if (previousData === "") {
+            console.log(previousData[i])
             previousData[i] == prevnum
         }
 
     }
-    else if (previousData.length >= 4) {
+    else if (previousData.length >= 3) {
         previousData.shift()
         previousData[i] = prevnum
     }
 
     i++
-
-
 
     // displayStoreResults()
     // console.log(previousData)    
@@ -295,6 +295,36 @@ function storeResults() {
 //     console.log(previousData)
 // }
 
+
+// function storeResults() {
+
+//     if (previousData.length <= 3) {
+//         if (previousData !== "") {
+//             // previousData[i] = prevnum
+//             // console.log(previousData[i])
+//             previousData.push(prevnum)
+//         }
+
+//         else if (previousData === "") {
+//             // console.log(previousData[i])
+//             // previousData[i] == prevnum
+//             previousData.push(prevnum)
+
+//         }
+
+//     }
+//     else if (previousData.length >= 3) {
+//         // previousData.shift()
+//         // previousData[i] = prevnum
+//         previousData.pop
+//     }
+
+//     i++
+
+//     // displayStoreResults()
+//     // console.log(previousData)    
+// }
+
 function displayStoreResults() {
     let count = 0
     const resultval = document.createElement('h4')
@@ -305,6 +335,7 @@ function displayStoreResults() {
             resultval.textContent = val
         }
         result.appendChild(resultval)
+        console.log(resultval)
     })
 
 }

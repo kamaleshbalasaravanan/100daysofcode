@@ -83,7 +83,7 @@ form input:hover{
 }
 
 .result-box{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -105,6 +105,11 @@ form input:hover{
     margin-top: 10px;
     font-size: 18px;
     letter-spacing: 1px;
+    color: rgb(120, 118, 118);
+}
+
+.result .highlight{
+    color: black;
 }
 
 /* responsive */
