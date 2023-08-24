@@ -23,6 +23,7 @@ body{
 }
 
 .calculator{
+    /* position: fixed; */
     background-color: #3a4452;
     padding: 20px;
     border-radius: 10px;
@@ -83,7 +84,7 @@ form input:hover{
 }
 
 .result-box{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;

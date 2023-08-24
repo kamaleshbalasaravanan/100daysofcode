@@ -226,12 +226,12 @@ function storeResults() {
     if (previousData.length <= 3) {
         if (previousData !== "") {
             previousData[i] = prevnum
-            console.log(previousData[i])
+            // console.log(previousData[i])
         }
 
         else if (previousData === "") {
-            console.log(previousData[i])
-            previousData[i] == prevnum
+            // console.log(previousData[i])
+            previousData[i] = prevnum
         }
 
     }
@@ -245,56 +245,6 @@ function storeResults() {
     // displayStoreResults()
     // console.log(previousData)    
 }
-
-// function displayStoreResults() {
-//     let count = 0
-//     const resultval = document.createElement('h4')
-//     console.log(previousData.length)
-
-//     previousData.map((val, index) => {
-
-//         if(count <4){
-//             if (val !== "") {
-//                 resultval.textContent = val
-//                 console.log(val)
-//                 console.log(count)
-//             }
-//         }
-
-//         count++
-//     })
-
-//     if(count > 4){
-//         previousData.shift()
-//     }
-
-//     // for(let i =0; i<previousData.length; i++){
-//     //     result.textContent = previousData[i]
-//     // }
-
-//     result.appendChild(resultval)
-
-
-//     // previousData.map((val, index) => {
-//     //     if(val !== ""){
-//     //         resultval.textContent = val
-
-//     //         if(count < 4){
-//     //             previousData.shift()
-//     //             result.appendChild(resultval)
-//     //         }
-//     //         else{
-//     //             result.appendChild(resultval)
-//     //         }
-//     //     }
-//     // })
-//     // count++
-//     // result.appendChild(resultval)
-
-//     // console.log(previousData)
-//     console.log(previousData)
-// }
-
 
 // function storeResults() {
 
@@ -330,12 +280,42 @@ function displayStoreResults() {
     const resultval = document.createElement('h4')
     console.log(previousData)
 
+
+    console.log(result.childNodes.length)
+    console.log(result.childNodes)
+
+    // console.log(result.length)
+
+
+    if(result.childNodes[3]){
+        console.log('hi')
+      
+    }
+
+    // result.childNodes.forEach(node => {
+
+    //     if(node.nodeType === 3){
+    //        console.log(node)
+    //     }
+
+    // })
+
+    if(result.childNodes.length > 5){
+        if(result.childNodes[3]){
+            const child = result.childNodes[3]
+            result.removeChild(child)
+
+            console.log(result.childNodes[3])
+        }
+    }
+
+
     previousData.map((val) => {
         if (val !== "") {
             resultval.textContent = val
         }
         result.appendChild(resultval)
-        console.log(resultval)
+        console.log(result)
     })
 
 }
