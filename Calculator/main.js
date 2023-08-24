@@ -300,12 +300,12 @@ function displayStoreResults() {
 
     // })
 
-    if(result.childNodes.length > 5){
-        if(result.childNodes[3]){
-            const child = result.childNodes[3]
+    if(result.childNodes.length > 2){
+        if(result.childNodes[0]){
+            const child = result.childNodes[0]
             result.removeChild(child)
 
-            console.log(result.childNodes[3])
+            console.log(result.childNodes[2])
         }
     }
 
