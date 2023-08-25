@@ -14,7 +14,9 @@ This repository for doing 100 code in 100 days. It is an incredible experience f
 
 ### Day-6 Sticky Navbar [Sticky Navbar](https://100daysofcode01.netlify.app/sticky-navbar/)
 
-### Day-7 Stopwatch [Stopwatch](https://100daysofcode01.netlify.app/stopwatch/)
+### Day-7 Drumkit [Drumkit](https://100daysofcode01.netlify.app/drumkit/)
+
+### Day-8 Stopwatch [Stopwatch](https://100daysofcode01.netlify.app/stopwatch/)
 	
 ### Day-9 Weight Converter [Weight Converter](https://100daysofcode01.netlify.app/weight-converter/)
 
