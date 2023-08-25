@@ -32,7 +32,7 @@ deletebtn.addEventListener("click", handleDelete)
 
 numberBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-        // e.preventDefault()
+        e.preventDefault()
         handleNumber(e.target.value)
         // console.log(e.target.value)
     })
@@ -286,11 +286,12 @@ function displayStoreResults() {
 
     // console.log(result.length)
 
+    // if(result.firstChild){
+    //     const child = result.firstChild
+        
+    // }
 
-    if(result.childNodes[3]){
-        console.log('hi')
-      
-    }
+    console.log(result.childNodes[0])
 
     // result.childNodes.forEach(node => {
 
@@ -305,6 +306,7 @@ function displayStoreResults() {
             const child = result.childNodes[0]
             result.removeChild(child)
 
+            console.log(child)
             console.log(result.childNodes[2])
         }
     }
