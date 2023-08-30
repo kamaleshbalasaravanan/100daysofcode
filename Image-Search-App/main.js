@@ -1,5 +1,5 @@
-// const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
-const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
+const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+// const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
 
 const menu = document.querySelector("#menu")
 const header = document.querySelector('header')
@@ -22,7 +22,7 @@ const titleName = []
 // console.log(categoriescontainer)
 let inputData = ""
 let page = 1
-// let pageX
+let pageX
 let i = 0
 let iterateNum = Math.floor(Math.random() * 1000)
 let titlesarray = ["", "", "", "", "", "", "", "", "", ""]
@@ -76,15 +76,15 @@ icons.forEach((icon) => {
 // })
 
 
-// function reloadFunc(){
-//     pageX = Math.floor(Math.random() * 100)
-// }
+function reloadFunc(){
+    pageX = Math.floor(Math.random() * 100)
+}
 
 function carouselImg() {
     // console.log('carousel')
-    let pageX = Math.floor(Math.random() * 100)
+    let pageY = Math.floor(Math.random() * 100)
     // let topic = "wallpapers"
-    const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="wallpaper"&client_id=${accesskey}`
+    const url = `https://api.unsplash.com/search/photos?page=${pageY}&query="nature"&client_id=${accesskey}`
 
     fetch(url)
         .then((resp) => resp.json())
@@ -169,7 +169,7 @@ function searchImages() {
 
 
 function categories() {
-    let pageX = Math.floor(Math.random() * 100)
+    // let pageX = Math.floor(Math.random() * 100)
     let a = 0;
     // console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
@@ -241,11 +241,13 @@ showMore.addEventListener("click", () => {
 })
 
 next.addEventListener("click", () => {
-    reloadFunc()
+    // reloadFunc()
+    pageX++
     categories()
 })
 
-
+reloadFunc()
 categories()
+
 // window.addEventListener("load", categories())  
-window.addEventListener("load", carouselImg())
+window.addEventListener("load", carouselImg()) 
