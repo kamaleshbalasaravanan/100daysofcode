@@ -242,6 +242,11 @@ input::placeholder{
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
 }
 
+#search-btn:hover{
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
 #title{
     width: 100%;
     display: flex;
@@ -316,6 +321,10 @@ input::placeholder{
     display: none;
 }
 
+#showmore-btn:hover{
+    opacity: 0.7;
+}
+
 .categories{
     line-height: 1.6;
     max-width: 1700px;
@@ -380,6 +389,10 @@ input::placeholder{
     /* display: block;/ */
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     /* display: none; */
+}
+
+#next-btn:hover{
+    opacity: 0.7;
 }
 
 .box{
