@@ -1,6 +1,6 @@
-// const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
     // diff 
-const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
+// const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
 
 const menu = document.querySelector("#menu")
 const header = document.querySelector('header')
@@ -19,7 +19,7 @@ const next = document.querySelector("#next-btn")
 // console.log(formEl,inputEl,searchResults,showMore)
 const categoriescontainer = document.querySelector(".categories-container")
 
-const titleName = []
+let titleName = new Array(10)
 // console.log(categoriescontainer)
 let inputData = ""
 let page = 1
@@ -29,7 +29,7 @@ let iterateNum = Math.floor(Math.random() * 1000)
 let titlesarray = ["", "", "", "", "", "", "", "", "", ""]
 
 
-// searchBtn.addEventListener("click",searchImages)
+
 
 menu.addEventListener("click", () => {
     header.classList.toggle('close')
@@ -69,13 +69,6 @@ icons.forEach((icon) => {
         carouselImg()
     })
 })
-
-
-// categoriescontainer.addEventListener("click", () => {
-//     window.location.href = "categories.html"
-//     // document.querySelector('')
-// })
-
 
 function reloadFunc(){
     // pageX = Math.floor(Math.random() * 100)
@@ -117,7 +110,6 @@ function searchImages() {
         fetch(url)
             .then((resp) => resp.json())
             .then((data) => {
-                // console.log(data)
                 // console.log(data.results)
                 const results = data.results
                 if (page === 1) {
@@ -131,7 +123,6 @@ function searchImages() {
                 title.appendChild(searchTitle)
 
                 results.map((result) => {
-                    //  console.log("1")
                     //  console.log(result)
                     const imageWrapper = document.createElement('div')
                     imageWrapper.classList.add("search-result")
@@ -142,7 +133,6 @@ function searchImages() {
                     imageLink.href = result.links.html
                     imageLink.target = "_blank"
                     imageLink.textContent = result.alt_description
-
                     imageWrapper.appendChild(image)
                     imageWrapper.appendChild(imageLink)
                     searchResults.appendChild(imageWrapper)
@@ -157,7 +147,6 @@ function searchImages() {
             .catch(() => {
                 if (inputData.length == 0) {
                     alert("input field cannot be empty")
-                    // console.log('hi')
                 }
                 else {
                     alert("please enter the valid data")
@@ -172,7 +161,8 @@ function searchImages() {
 
 function categories() {
     // let pageX = Math.floor(Math.random() * 100)
-    pageX = sessionStorage.getItem("val")
+    let val = sessionStorage.getItem("val")
+    pageX = val
     let a = 0;
     // console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
@@ -183,9 +173,6 @@ function categories() {
             const results = data.results
             categoriescontainer.innerHTML = ""
 
-            // if (pageX === 1) {
-            //     categoriescontainer.innerHTML = ""
-            // }
             results.map((result) => {
                 // console.log(result.tags)
                 const tags = result.tags
@@ -194,6 +181,7 @@ function categories() {
                 // console.log(wrapper)   
                 wrapper.addEventListener("click", (e) => {
                     let indexValue = wrapper.dataset.Index
+                    // console.log(indexValue)
                     let selectTitle = titleName[indexValue]
                     // console.log(selectTitle)
                     localStorage.setItem('title', selectTitle)
@@ -209,18 +197,19 @@ function categories() {
                 a++
 
                 tags.map((value, index) => {
-                    // console.log(index,value)
-                    // value == 0 ? console.log(index) :"i"
                     if (index == 0) {
                         let tag = value
                         // console.log(tag.title)
                         const title = document.createElement('h2')
                         title.innerHTML = tag.title
                         // console.log(i)
-                        titleName[i] = tag.title
-                        // console.log(titleName)
-                        // console.log(titleName)
-                        // localStorage.setItem('title', tag.title)
+
+                       titleName[i] = tag.title
+
+                    //    titleName.forEach((element, i) => {
+                    //        console.log(element+" "+i)
+                    //    })
+
                         wrapper.appendChild(title)
                         i++
                     }
@@ -244,9 +233,11 @@ showMore.addEventListener("click", () => {
 })
 
 next.addEventListener("click", () => {
+    i = 0
+
+    titleName.splice(0, titleName.length)
+    localStorage.removeItem("title")
     reloadFunc()
-    // console.log(pageX++)
-    pageX++
     categories()
 })
 

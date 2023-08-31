@@ -470,6 +470,7 @@ input::placeholder{
 
 .social a i:hover{
     background-color: #138065;
+    opacity: 0.9;
 }
 
 .contact p{
