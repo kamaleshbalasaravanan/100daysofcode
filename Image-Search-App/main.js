@@ -1,5 +1,6 @@
-const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
-// const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
+// const accesskey = "J89b2e8tWbUiK2LmsptMzHcxD2UIBwLDRU0GEtRnSq0"
+    // diff 
+const accesskey = "dUdr-GJScgpg8VvVBkj1yqj6_-zoG55fheEPgd0fCos"
 
 const menu = document.querySelector("#menu")
 const header = document.querySelector('header')
