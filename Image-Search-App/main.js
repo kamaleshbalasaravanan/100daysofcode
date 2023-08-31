@@ -77,7 +77,8 @@ icons.forEach((icon) => {
 
 
 function reloadFunc(){
-    pageX = Math.floor(Math.random() * 100)
+    // pageX = Math.floor(Math.random() * 100)
+    sessionStorage.setItem("val",  Math.floor(Math.random() * 100))
 }
 
 function carouselImg() {
@@ -170,6 +171,7 @@ function searchImages() {
 
 function categories() {
     // let pageX = Math.floor(Math.random() * 100)
+    pageX = sessionStorage.getItem("val")
     let a = 0;
     // console.log(pageX)
     const url = `https://api.unsplash.com/search/photos?page=${pageX}&query="random"&client_id=${accesskey}`
@@ -241,12 +243,13 @@ showMore.addEventListener("click", () => {
 })
 
 next.addEventListener("click", () => {
-    // reloadFunc()
+    reloadFunc()
+    // console.log(pageX++)
     pageX++
     categories()
 })
 
-reloadFunc()
+// reloadFunc()
 categories()
 
 // window.addEventListener("load", categories())  
