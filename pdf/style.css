@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Open+Sans&family=Poppins:wght@200;300;400;500;600;700;900&family=Redressed&family=Ubuntu:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+    --bg-color: #ead376;
+    --white: #fff;
+    --primary-color:#2f2929;
+    --secondary-color:#5265a7;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--primary-color);
+    padding: 0 20px;
+}
+
+.invoice{
+    background-color: var(--white);
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    padding: 50px 60px;
+}
+
+.p_title{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.i_row{
+    display: flex;
+}
+
+.text_right{
+    text-align: right;
+}
+
+.invoice .header .i_row{
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+.invoice .header .i_row:last-child{
+    align-items: flex-end;
+}
+
+/* .i_row .i_address .p_title span{
+    text-align: justify;
+} */
+
+
+.invoice .header .i_logo p{
+    font-family: 'Redressed', cursive;
+}
+
+.invoice .header .i_logo p,
+.invoice .header .i_title h2{
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--secondary-color);
+}
+
+.invoice .header .i_address .p_title span{
+    font-size: 12px;
+    font-weight: 500;
+}
