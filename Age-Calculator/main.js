@@ -45,8 +45,8 @@ function calculateDate(e){
     }
     else{
         console.log('bye')
-        const age = calculateAge(birthdayValue)
-        result.textContent = `your age is ${age} ${age<=1?"year":"years"} old`
+        let age = calculateAge(birthdayValue)
+        result.textContent = `your age  ${age} ${age<=1?"year":"years"} old`
     }
 }
 
@@ -57,12 +57,13 @@ function calculateAge(birthdayValue){
     console.log(birthdayDate.getFullYear())
     console.log(birthdayDate.getMonth())
 
-    const currentAge = currentDate.getFullYear() - birthdayDate.getFullYear()
-    const month = currentDate.getMonth() - birthdayDate.getMonth()
+    let currentAge = currentDate.getFullYear() - birthdayDate.getFullYear()
+    const month = (currentDate.getMonth() - birthdayDate.getMonth()) 
     console.log(currentAge+", "+month)
 
     if( month < 0 || (month === 0 &&  currentDate.getDate() < birthdayDate.getDate()) ){
         currentAge--
+        console.log(currentAge)
     }
         return currentAge
 }
